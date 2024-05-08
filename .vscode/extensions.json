@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "ms-azuretools.vscode-docker",
+    "EditorConfig.EditorConfig",
+    "dbaeumer.vscode-eslint",
+    "firsttris.vscode-jest-runner",
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens"
+  ]
+}
