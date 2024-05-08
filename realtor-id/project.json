@@ -1,0 +1,19 @@
+{
+  "name": "realtor-id",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "realtor-id/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/realtor-id",
+        "main": "realtor-id/src/index.ts",
+        "tsConfig": "realtor-id/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}
