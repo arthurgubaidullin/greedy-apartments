@@ -18,6 +18,7 @@
     "baseUrl": ".",
     "paths": {
       "@ga/realtor-id": ["realtor-id/src/index.ts"],
+      "@ga/realtor-in-registry": ["realtor-registry/realtor/src/index.ts"],
       "@ga/register-realtor": ["realtor-registry/register-realtor/src/index.ts"]
     }
   },
