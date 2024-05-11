@@ -25,11 +25,11 @@
       "@ga/realtor-repository-in-registry": [
         "realtor-registry/realtor-repository/src/index.ts"
       ],
-      "@ga/register-realtor": [
-        "realtor-registry/register-realtor/src/index.ts"
-      ],
       "@ga/register-realtor-api-in-registry": [
         "realtor-registry/register-realtor-api/src/index.ts"
+      ],
+      "@ga/register-realtor-in-registry": [
+        "realtor-registry/register-realtor/src/index.ts"
       ]
     }
   },

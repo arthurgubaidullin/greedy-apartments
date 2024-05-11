@@ -1,5 +1,8 @@
 import * as RealtorRepository from '@ga/realtor-repository-in-registry';
-import { RegisterRealtor, registerRealtor } from '@ga/register-realtor';
+import {
+  RegisterRealtor,
+  registerRealtor,
+} from '@ga/register-realtor-in-registry';
 import { pipe } from 'fp-ts/function';
 
 const repository = RealtorRepository.getRealtorRepository();

@@ -1,5 +1,5 @@
 {
-  "name": "register-realtor",
+  "name": "register-realtor-in-registry",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "realtor-registry/register-realtor/src",
   "projectType": "library",

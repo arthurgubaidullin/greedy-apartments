@@ -1,5 +1,5 @@
 {
-  "name": "@ga/register-realtor",
+  "name": "@ga/register-realtor-in-registry",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
