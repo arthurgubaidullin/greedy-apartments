@@ -39,6 +39,9 @@
       ],
       "@ga/subscribe-to-realtor-registry-api-in-tenant-management": [
         "tenant-management/subscribe-to-realtor-registry-api/src/index.ts"
+      ],
+      "@ga/update-realtor-document-in-tenant-management": [
+        "tenant-management/update-realtor-document/src/index.ts"
       ]
     }
   },
