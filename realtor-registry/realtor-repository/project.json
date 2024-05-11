@@ -3,7 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "realtor-registry/realtor-repository/src",
   "projectType": "library",
-  "tags": [],
+  "tags": ["slice:realtor-registry", "tier:api"],
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
