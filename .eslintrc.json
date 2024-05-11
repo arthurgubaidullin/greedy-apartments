@@ -44,15 +44,24 @@
               },
               {
                 "sourceTag": "slice:realtor-registry",
-                "onlyDependOnLibsWithTags": ["slice:realtor-registry"]
+                "onlyDependOnLibsWithTags": [
+                  "slice:realtor-registry",
+                  "slice:common"
+                ]
               },
               {
                 "sourceTag": "slice:realtor-management",
-                "onlyDependOnLibsWithTags": ["slice:realtor-management"]
+                "onlyDependOnLibsWithTags": [
+                  "slice:realtor-management",
+                  "slice:common"
+                ]
               },
               {
                 "sourceTag": "slice:tenant-management",
-                "onlyDependOnLibsWithTags": ["slice:tenant-management"]
+                "onlyDependOnLibsWithTags": [
+                  "slice:tenant-management",
+                  "slice:common"
+                ]
               }
             ]
           }
