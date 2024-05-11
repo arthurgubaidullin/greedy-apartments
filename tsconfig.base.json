@@ -28,6 +28,9 @@
       "@ga/realtor-repository-in-registry": [
         "realtor-registry/realtor-repository/src/index.ts"
       ],
+      "@ga/realtor-repository-in-tenant-management": [
+        "tenant-management/realtor-repository/src/index.ts"
+      ],
       "@ga/register-realtor-api-in-registry": [
         "realtor-registry/register-realtor-api/src/index.ts"
       ],

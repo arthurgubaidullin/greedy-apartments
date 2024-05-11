@@ -1,0 +1,19 @@
+{
+  "name": "realtor-repository-in-tenant-management",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tenant-management/realtor-repository/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/tenant-management/realtor-repository",
+        "main": "tenant-management/realtor-repository/src/index.ts",
+        "tsConfig": "tenant-management/realtor-repository/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}
