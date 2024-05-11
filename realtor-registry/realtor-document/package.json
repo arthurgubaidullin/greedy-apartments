@@ -2,7 +2,9 @@
   "name": "@ga/realtor-document-in-registry",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@ga/realtor-in-registry": "0.0.1",
+    "io-ts": "^2.2.21"
   },
   "type": "commonjs",
   "main": "./src/index.js",
