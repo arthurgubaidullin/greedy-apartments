@@ -46,6 +46,7 @@
                 "sourceTag": "slice:realtor-registry",
                 "onlyDependOnLibsWithTags": [
                   "slice:realtor-registry",
+                  "slice:apis",
                   "slice:common"
                 ]
               },
@@ -53,6 +54,7 @@
                 "sourceTag": "slice:realtor-management",
                 "onlyDependOnLibsWithTags": [
                   "slice:realtor-management",
+                  "slice:apis",
                   "slice:common"
                 ]
               },
@@ -60,6 +62,7 @@
                 "sourceTag": "slice:tenant-management",
                 "onlyDependOnLibsWithTags": [
                   "slice:tenant-management",
+                  "slice:apis",
                   "slice:common"
                 ]
               }
