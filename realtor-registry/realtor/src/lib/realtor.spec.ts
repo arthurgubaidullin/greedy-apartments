@@ -1,4 +1,4 @@
-import { pipe } from 'fp-ts/lib/function';
+import { pipe } from 'fp-ts/function';
 import * as Realtor from './realtor';
 import * as RealtorId from '@ga/realtor-id';
 import * as E from 'fp-ts/Either';

@@ -1,6 +1,6 @@
 import * as fs from 'fast-check';
-import * as E from 'fp-ts/lib/Either';
-import { pipe } from 'fp-ts/lib/function';
+import * as E from 'fp-ts/Either';
+import { pipe } from 'fp-ts/function';
 import * as RealtorId from './realtor-id';
 import { FailedToCreateRealtorId } from './failed-to-create-realtor-id';
 

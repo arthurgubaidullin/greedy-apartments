@@ -1,5 +1,5 @@
 import * as RealtorId from '@ga/realtor-id';
-import { pipe } from 'fp-ts/lib/function';
+import { pipe } from 'fp-ts/function';
 import * as t from 'io-ts';
 import { fromNewtype } from 'io-ts-types';
 import * as Newtype from 'newtype-ts';

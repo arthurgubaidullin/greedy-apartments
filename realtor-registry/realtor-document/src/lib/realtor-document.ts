@@ -1,7 +1,7 @@
 import * as Realtor from '@ga/realtor-in-registry';
 import * as t from 'io-ts';
 import * as RealtorId from '@ga/realtor-id';
-import { pipe } from 'fp-ts/lib/function';
+import { pipe } from 'fp-ts/function';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface T extends t.TypeOf<typeof codec> {}

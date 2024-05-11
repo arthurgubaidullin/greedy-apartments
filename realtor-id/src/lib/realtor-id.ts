@@ -1,7 +1,7 @@
-import { pipe } from 'fp-ts/lib/function';
+import { pipe } from 'fp-ts/function';
 import { NonEmptyString, fromNewtype } from 'io-ts-types';
 import * as Newtype from 'newtype-ts';
-import * as E from 'fp-ts/lib/Either';
+import * as E from 'fp-ts/Either';
 import { FailedToCreateRealtorId } from './failed-to-create-realtor-id';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
