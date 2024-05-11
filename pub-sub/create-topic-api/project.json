@@ -1,0 +1,19 @@
+{
+  "name": "pub-sub",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "pub-sub/create-topic-api/src",
+  "projectType": "library",
+  "tags": ["slice:common", "tier:api"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/pub-sub/create-topic-api",
+        "main": "pub-sub/create-topic-api/src/index.ts",
+        "tsConfig": "pub-sub/create-topic-api/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}

@@ -17,6 +17,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ga/pub-sub": ["pub-sub/create-topic-api/src/index.ts"],
       "@ga/realtor-changes-in-registry": [
         "realtor-registry/realtor-changes/src/index.ts"
       ],
