@@ -17,6 +17,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ga/realtor-changes-in-registry": [
+        "realtor-registry/realtor-changes/src/index.ts"
+      ],
       "@ga/realtor-document-in-registry": [
         "realtor-registry/realtor-document/src/index.ts"
       ],

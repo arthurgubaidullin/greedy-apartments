@@ -1,0 +1,19 @@
+{
+  "name": "realtor-changes-in-registry",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "realtor-registry/realtor-changes/src",
+  "projectType": "library",
+  "tags": ["slice:realtor-registry", "tier:api"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/realtor-registry/realtor-changes",
+        "main": "realtor-registry/realtor-changes/src/index.ts",
+        "tsConfig": "realtor-registry/realtor-changes/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}
