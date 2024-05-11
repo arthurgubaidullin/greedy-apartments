@@ -1,1 +1,1 @@
-export * from './lib/realtor-repository-api-in-registry';
+export * from './lib/register-realtor-api';
