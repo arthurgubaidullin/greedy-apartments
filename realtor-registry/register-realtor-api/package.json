@@ -1,5 +1,5 @@
 {
-  "name": "@ga/realtor-repository-api-in-registry",
+  "name": "@ga/register-realtor-api-in-registry",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0"

@@ -22,13 +22,15 @@
       ],
       "@ga/realtor-id": ["realtor-id/src/index.ts"],
       "@ga/realtor-in-registry": ["realtor-registry/realtor/src/index.ts"],
-      "@ga/realtor-repository-api-in-registry": [
-        "realtor-registry/realtor-repository-api/src/index.ts"
-      ],
       "@ga/realtor-repository-in-registry": [
         "realtor-registry/realtor-repository/src/index.ts"
       ],
-      "@ga/register-realtor": ["realtor-registry/register-realtor/src/index.ts"]
+      "@ga/register-realtor": [
+        "realtor-registry/register-realtor/src/index.ts"
+      ],
+      "@ga/register-realtor-api-in-registry": [
+        "realtor-registry/register-realtor-api/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
