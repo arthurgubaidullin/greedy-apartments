@@ -2,7 +2,12 @@
   "name": "@ga/realtor-changes-in-registry",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "io-ts": "^2.2.21",
+    "@ga/realtor-id": "0.0.1",
+    "io-ts-types": "^0.5.19",
+    "@ga/pub-sub": "0.0.1",
+    "fp-ts": "^2.16.5"
   },
   "type": "commonjs",
   "main": "./src/index.js",
