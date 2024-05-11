@@ -1,1 +1,1 @@
-export * from './lib/realtor-document-in-tenant-management';
+export * from './lib/realtor-document';
