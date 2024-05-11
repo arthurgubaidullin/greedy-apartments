@@ -13,8 +13,46 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "tier:lib",
+                "onlyDependOnLibsWithTags": ["tier:lib"]
+              },
+              {
+                "sourceTag": "tier:domain",
+                "onlyDependOnLibsWithTags": ["tier:domain", "tier:lib"],
+                "bannedExternalImports": ["react*"]
+              },
+              {
+                "sourceTag": "tier:use-case",
+                "onlyDependOnLibsWithTags": [
+                  "tier:use-case",
+                  "tier:domain",
+                  "tier:lib"
+                ],
+                "bannedExternalImports": ["react*"]
+              },
+              {
+                "sourceTag": "tier:api",
+                "onlyDependOnLibsWithTags": [
+                  "tier:api",
+                  "tier:use-case",
+                  "tier:lib"
+                ]
+              },
+              {
+                "sourceTag": "tier:app",
+                "onlyDependOnLibsWithTags": ["tier:app", "tier:api", "tier:lib"]
+              },
+              {
+                "sourceTag": "slice:realtor-registry",
+                "onlyDependOnLibsWithTags": ["slice:realtor-registry"]
+              },
+              {
+                "sourceTag": "slice:realtor-management",
+                "onlyDependOnLibsWithTags": ["slice:realtor-management"]
+              },
+              {
+                "sourceTag": "slice:tenant-management",
+                "onlyDependOnLibsWithTags": ["slice:tenant-management"]
               }
             ]
           }
