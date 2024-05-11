@@ -17,7 +17,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ga/realtor-id": ["realtor-id/src/index.ts"]
+      "@ga/realtor-id": ["realtor-id/src/index.ts"],
+      "@ga/register-realtor": ["realtor-registry/register-realtor/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
