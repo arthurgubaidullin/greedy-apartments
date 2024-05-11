@@ -3,7 +3,7 @@ import * as RealtorDocument from '@ga/realtor-document-in-tenant-management';
 import { pipe } from 'fp-ts/function';
 import * as O from 'fp-ts/Option';
 
-const repository = RealtorRepository.getRealtorRepository();
+const repository = RealtorRepository.get();
 
 export const updateRealtorDocument = (document: RealtorDocument.T): void => {
   return pipe(

@@ -4,7 +4,7 @@ import * as O from 'fp-ts/Option';
 
 const db = new Map<RealtorId.T, RealtorDocument.T>();
 
-export const getRealtorRepository = () => {
+export const get = () => {
   return {
     create: (document: RealtorDocument.T): void => {
       const id = document.id;
