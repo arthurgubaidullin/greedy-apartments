@@ -2,7 +2,9 @@
   "name": "@ga/subscribe-to-realtor-registry-api-in-tenant-management",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@ga/realtor-changes-in-registry": "0.0.1",
+    "@ga/update-realtor-document-in-tenant-management": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
