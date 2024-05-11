@@ -1,0 +1,19 @@
+{
+  "name": "subscribe-to-realtor-registry-api-in-tenant-management",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tenant-management/subscribe-to-realtor-registry-api/src",
+  "projectType": "library",
+  "tags": ["slice:tenant-management", "tier:api"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/tenant-management/subscribe-to-realtor-registry-api",
+        "main": "tenant-management/subscribe-to-realtor-registry-api/src/index.ts",
+        "tsConfig": "tenant-management/subscribe-to-realtor-registry-api/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}
