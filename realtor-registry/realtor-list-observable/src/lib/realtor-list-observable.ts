@@ -16,21 +16,25 @@ type RealtorStructROArrayOption = O.Option<
   ReadonlyArray<RealtorStruct.RealtorStruct>
 >;
 
-export const realtorList: IObservableValue<RealtorStructROArrayOption> =
-  observable.box<RealtorStructROArrayOption>(O.none, {
-    equals: O.getEq(RA.getEq(RealtorStruct.Eq)).equals,
-  } satisfies _Eq.Eq<RealtorStructROArrayOption>);
+const _realtorList = observable.box<RealtorStructROArrayOption>(O.none, {
+  equals: O.getEq(RA.getEq(RealtorStruct.Eq)).equals,
+} satisfies _Eq.Eq<RealtorStructROArrayOption>);
 
 const update = action(
   (list: O.Option<ReadonlyArray<RealtorStruct.RealtorStruct>>) => {
-    realtorList.set(list);
+    _realtorList.set(list);
   }
 );
 
-onBecomeObserved(realtorList, () => {
+onBecomeObserved(_realtorList, () => {
   pipe(getRealtorListApi(), O.some, update);
 });
 
-onBecomeUnobserved(realtorList, () => {
+onBecomeUnobserved(_realtorList, () => {
   update(O.none);
 });
+
+export const realtorList: Pick<
+  IObservableValue<RealtorStructROArrayOption>,
+  'get'
+> = _realtorList;
