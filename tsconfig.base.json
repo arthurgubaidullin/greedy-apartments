@@ -26,6 +26,7 @@
       "@ga/offer-document-in-realtor-management": [
         "realtor-management/offer-document/src/index.ts"
       ],
+      "@ga/offer-id": ["offer-id/src/index.ts"],
       "@ga/offer-in-realtor-management": [
         "realtor-management/offer/src/index.ts"
       ],
