@@ -20,6 +20,9 @@
       "@ga/create-offer-api-in-realtor-management": [
         "realtor-management/create-offer-api/src/index.ts"
       ],
+      "@ga/create-offer-in-realtor-management": [
+        "realtor-management/create-offer/src/index.ts"
+      ],
       "@ga/offer-document-in-realtor-management": [
         "realtor-management/offer-document/src/index.ts"
       ],

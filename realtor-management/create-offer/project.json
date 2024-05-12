@@ -1,0 +1,19 @@
+{
+  "name": "create-offer-in-realtor-management",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "realtor-management/create-offer/src",
+  "projectType": "library",
+  "tags": ["slice:realtor-management", "tier:use-case"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/realtor-management/create-offer",
+        "main": "realtor-management/create-offer/src/index.ts",
+        "tsConfig": "realtor-management/create-offer/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}
