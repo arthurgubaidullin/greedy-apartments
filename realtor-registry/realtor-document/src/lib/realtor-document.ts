@@ -10,3 +10,6 @@ export const codec = Realtor.codec;
 
 export const getRealtorId = (document: T): RealtorId.T =>
   pipe(document, codec.encode, (a) => a.id);
+
+export const toJSON = (document: T): t.OutputOf<typeof codec> =>
+  pipe(document, codec.encode);
