@@ -1,7 +1,7 @@
-import * as O from 'fp-ts/Option';
-import { IObservableValue, action, observable } from 'mobx';
 import * as RealtorStruct from '@ga/realtor-struct-in-realtor-registry';
+import * as O from 'fp-ts/Option';
 import { Eq } from 'fp-ts/lib/Eq';
+import { IObservableValue, action, observable } from 'mobx';
 
 type RealtorStructOption = O.Option<RealtorStruct.RealtorStruct>;
 
