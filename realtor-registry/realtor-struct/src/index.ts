@@ -1,1 +1,1 @@
-export * from './lib/realtor-struct-in-realtor-registry';
+export * from './lib/realtor-struct';
