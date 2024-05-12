@@ -12,5 +12,8 @@ export const getRealtorRepository = () => {
         db.set(id, document);
       }
     },
+    getAll: (): ReadonlyArray<RealtorDocument.T> => {
+      return Array.from(db.values());
+    },
   };
 };
