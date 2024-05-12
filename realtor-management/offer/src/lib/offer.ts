@@ -9,11 +9,13 @@ export function offerInRealtorManagement(): string {
   return 'offer-in-realtor-management';
 }
 
-const Offer = t.strict({
-  id: OfferId.codec,
-  realtorId: RealtorId.codec,
-  name: t.string,
-});
+const Offer = t.readonly(
+  t.strict({
+    id: OfferId.codec,
+    realtorId: RealtorId.codec,
+    name: t.string,
+  })
+);
 
 export type SimplifiedOffer = t.TypeOf<typeof Offer>;
 
@@ -26,3 +28,5 @@ export const codec = fromNewtype<Offer>(Offer);
 const iso = Newtype.iso<Offer>();
 
 export const create = (data: SimplifiedOffer): Offer => pipe(data, iso.wrap);
+
+export const toJSON = (data: Offer) => pipe(data, iso.unwrap);
