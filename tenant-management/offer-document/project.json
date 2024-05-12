@@ -1,0 +1,19 @@
+{
+  "name": "offer-document-in-tenant-management",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tenant-management/offer-document/src",
+  "projectType": "library",
+  "tags": ["slice:tenant-management", "tier:use-case"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/tenant-management/offer-document",
+        "main": "tenant-management/offer-document/src/index.ts",
+        "tsConfig": "tenant-management/offer-document/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}
