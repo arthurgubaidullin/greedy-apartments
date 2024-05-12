@@ -23,3 +23,5 @@ export const fromString = (s: string): E.Either<FailedToCreateRealtorId, T> =>
     E.fromPredicate(NonEmptyString.is, () => new FailedToCreateRealtorId()),
     E.map(fromNonEmptyString)
   );
+
+export const toString = (id: T): NonEmptyString => iso.unwrap(id);
