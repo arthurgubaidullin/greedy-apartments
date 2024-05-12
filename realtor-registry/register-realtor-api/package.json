@@ -5,7 +5,8 @@
     "tslib": "^2.3.0",
     "fp-ts": "^2.16.5",
     "@ga/register-realtor-in-registry": "0.0.1",
-    "@ga/realtor-repository-in-registry": "0.0.1"
+    "@ga/realtor-repository-in-registry": "0.0.1",
+    "@ga/realtor-added-observable-in-realtor-registry": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",

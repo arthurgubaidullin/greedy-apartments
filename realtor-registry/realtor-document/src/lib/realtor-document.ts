@@ -1,15 +1,16 @@
-import * as Realtor from '@ga/realtor-in-registry';
-import * as t from 'io-ts';
 import * as RealtorId from '@ga/realtor-id';
 import { pipe } from 'fp-ts/function';
+import * as t from 'io-ts';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface T extends t.TypeOf<typeof codec> {}
 
-export const codec = Realtor.codec;
+export const codec = t.readonly(
+  t.strict({
+    id: RealtorId.codec,
+    name: t.string,
+  })
+);
 
 export const getRealtorId = (document: T): RealtorId.T =>
-  pipe(document, codec.encode, (a) => a.id);
-
-export const toJSON = (document: T): t.OutputOf<typeof codec> =>
-  pipe(document, codec.encode);
+  pipe(document, (a) => a.id);
