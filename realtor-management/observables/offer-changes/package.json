@@ -1,5 +1,5 @@
 {
-  "name": "@ga/offer-changes-in-realtor-management",
+  "name": "@ga/offer-changes-observable-in-realtor-management",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
