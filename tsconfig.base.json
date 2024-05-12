@@ -26,6 +26,9 @@
       "@ga/get-realtor-api-in-realtor-registry": [
         "realtor-registry/get-realtor-api/src/index.ts"
       ],
+      "@ga/get-realtor-list-api-in-realtor-registry": [
+        "realtor-registry/get-realtor-list-api/src/index.ts"
+      ],
       "@ga/offer-changes-in-realtor-management": [
         "realtor-management/offer-changes/src/index.ts"
       ],
