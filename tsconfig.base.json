@@ -54,6 +54,9 @@
       "@ga/offet-list-observable-in-realtor-management": [
         "realtor-management/observables/offer-list/src/index.ts"
       ],
+      "@ga/offet-struct-in-realtor-management": [
+        "realtor-management/offer-struct/src/index.ts"
+      ],
       "@ga/pub-sub": ["pub-sub/create-topic-api/src/index.ts"],
       "@ga/realtor-added-observable-in-realtor-registry": [
         "realtor-registry/observables/realtor-added/src/index.ts"
