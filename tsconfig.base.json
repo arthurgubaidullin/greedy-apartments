@@ -23,6 +23,9 @@
       "@ga/create-offer-in-realtor-management": [
         "realtor-management/create-offer/src/index.ts"
       ],
+      "@ga/get-offet-list-api-in-realtor-management": [
+        "realtor-management/get-offer-list-api/src/index.ts"
+      ],
       "@ga/get-realtor-api-in-realtor-registry": [
         "realtor-registry/get-realtor-api/src/index.ts"
       ],
