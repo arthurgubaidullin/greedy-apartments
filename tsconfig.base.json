@@ -17,6 +17,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ga/create-offer-api-in-realtor-management": [
+        "realtor-management/create-offer-api/src/index.ts"
+      ],
       "@ga/offer-document-in-realtor-management": [
         "realtor-management/offer-document/src/index.ts"
       ],
