@@ -36,6 +36,9 @@
       "@ga/offer-repository-in-realtor-management": [
         "realtor-management/offer-repository/src/index.ts"
       ],
+      "@ga/offer-repository-in-tenant-management": [
+        "tenant-management/offer-repository/src/index.ts"
+      ],
       "@ga/pub-sub": ["pub-sub/create-topic-api/src/index.ts"],
       "@ga/realtor-changes-in-registry": [
         "realtor-registry/realtor-changes/src/index.ts"
