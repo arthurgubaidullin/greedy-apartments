@@ -2,7 +2,11 @@
   "name": "@ga/offer-document-in-realtor-management",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@ga/offer-in-realtor-management": "0.0.1",
+    "io-ts": "^2.2.21",
+    "@ga/offer-id": "0.0.1",
+    "fp-ts": "^2.16.5"
   },
   "type": "commonjs",
   "main": "./src/index.js",
