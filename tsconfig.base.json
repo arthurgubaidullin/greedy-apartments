@@ -23,6 +23,9 @@
       "@ga/create-offer-in-realtor-management": [
         "realtor-management/create-offer/src/index.ts"
       ],
+      "@ga/offer-changes-in-realtor-management": [
+        "realtor-management/offer-changes/src/index.ts"
+      ],
       "@ga/offer-document-in-realtor-management": [
         "realtor-management/offer-document/src/index.ts"
       ],
