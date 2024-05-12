@@ -5,7 +5,7 @@ import {
   registerRealtor,
 } from '@ga/register-realtor-in-registry';
 import { pipe } from 'fp-ts/function';
-import { chainFirst } from 'fp-ts/lib/Identity';
+import * as I from 'fp-ts/Identity';
 
 const repository = RealtorRepository.getRealtorRepository();
 
@@ -13,8 +13,7 @@ export const registerRealtorApi = (data: RegisterRealtor): void => {
   return pipe(
     data,
     registerRealtor,
-    chainFirst(repository.create),
-
+    I.chainFirst(repository.create),
     RealtorAdded.publish
   );
 };
