@@ -1,6 +1,6 @@
 import * as Offer from '@ga/offer-in-realtor-management';
 import * as OfferDocument from '@ga/offer-document-in-realtor-management';
-import { pipe } from 'fp-ts/lib/function';
+import { pipe } from 'fp-ts/function';
 
 export type CreateOffer = Offer.SimplifiedOffer;
 

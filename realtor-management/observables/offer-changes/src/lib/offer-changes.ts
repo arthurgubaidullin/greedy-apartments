@@ -1,6 +1,6 @@
 import { observable } from 'mobx';
-import { Eq } from 'fp-ts/lib/Eq';
-import * as O from 'fp-ts/lib/Option';
+import { Eq } from 'fp-ts/Eq';
+import * as O from 'fp-ts/Option';
 import * as OfferAdded from './offer-added';
 
 type OfferAddedOption = O.Option<OfferAdded.OfferAdded>;

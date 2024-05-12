@@ -1,6 +1,6 @@
 import * as t from 'io-ts';
 import * as OfferDocument from '@ga/offer-document-in-realtor-management';
-import * as _Eq from 'fp-ts/lib/Eq';
+import * as _Eq from 'fp-ts/Eq';
 
 export type OfferAdded = t.TypeOf<typeof OfferAdded>;
 
