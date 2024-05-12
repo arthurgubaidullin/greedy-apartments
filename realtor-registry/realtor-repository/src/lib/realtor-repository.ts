@@ -8,7 +8,7 @@ export const getRealtorRepository = () => {
     create: (document: RealtorDocument.T): void => {
       const id = RealtorDocument.getRealtorId(document);
 
-      if (db.has(id)) {
+      if (!db.has(id)) {
         db.set(id, document);
       }
     },
