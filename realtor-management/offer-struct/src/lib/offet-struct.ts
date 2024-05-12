@@ -1,5 +1,6 @@
 import * as OfferId from '@ga/offer-id';
 import * as RealtorId from '@ga/realtor-id';
+import * as _Eq from 'fp-ts/lib/Eq';
 import * as t from 'io-ts';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -12,3 +13,9 @@ export const OfferStruct = t.readonly(
     name: t.string,
   })
 );
+
+export const Eq = _Eq.struct({
+  id: _Eq.eqStrict,
+  realtorId: _Eq.eqStrict,
+  name: _Eq.eqStrict,
+});
