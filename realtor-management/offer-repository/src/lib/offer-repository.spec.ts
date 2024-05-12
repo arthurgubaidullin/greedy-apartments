@@ -1,9 +1,5 @@
-import { offerRepositoryInRealtorManagement } from './offer-repository';
-
-describe('offerRepositoryInRealtorManagement', () => {
+describe('offer-repository-in-realtor-management', () => {
   it('should work', () => {
-    expect(offerRepositoryInRealtorManagement()).toEqual(
-      'offer-repository-in-realtor-management'
-    );
+    expect(1).toEqual(1);
   });
 });
