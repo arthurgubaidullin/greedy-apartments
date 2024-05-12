@@ -15,7 +15,7 @@ export const RealtorList = observer(() => {
           {pipe(
             list,
             RA.map((item) => (
-              <li>
+              <li key={RealtorId.toString(item.id)}>
                 <div>
                   id: {RealtorId.toString(item.id)}
                   <br />
