@@ -38,6 +38,9 @@
       "@ga/offer-document-in-realtor-management": [
         "realtor-management/offer-document/src/index.ts"
       ],
+      "@ga/offer-document-in-remote-offer-register": [
+        "remote-offer-register/offer-document/src/index.ts"
+      ],
       "@ga/offer-document-in-tenant-management": [
         "tenant-management/offer-document/src/index.ts"
       ],
