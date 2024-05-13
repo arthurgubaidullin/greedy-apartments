@@ -51,6 +51,9 @@
       "@ga/offer-repository-in-realtor-management": [
         "realtor-management/offer-repository/src/index.ts"
       ],
+      "@ga/offer-repository-in-remote-offer-register": [
+        "remote-offer-register/offer-repository/src/index.ts"
+      ],
       "@ga/offer-repository-in-tenant-management": [
         "tenant-management/offer-repository/src/index.ts"
       ],
