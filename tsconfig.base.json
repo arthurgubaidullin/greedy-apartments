@@ -108,6 +108,9 @@
       "@ga/register-realtor-in-registry": [
         "realtor-registry/register-realtor/src/index.ts"
       ],
+      "@ga/service-id-in-remote-offer-register": [
+        "remote-offer-register/service-id/src/index.ts"
+      ],
       "@ga/subscribe-to-realtor-registry-api-in-tenant-management": [
         "tenant-management/subscribe-to-realtor-registry-api/src/index.ts"
       ],

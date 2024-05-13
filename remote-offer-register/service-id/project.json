@@ -1,0 +1,19 @@
+{
+  "name": "service-id-in-remote-offer-register",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "remote-offer-register/service-id/src",
+  "projectType": "library",
+  "tags": ["slice:remote-offer-register", "tier:api"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/remote-offer-register/service-id",
+        "main": "remote-offer-register/service-id/src/index.ts",
+        "tsConfig": "remote-offer-register/service-id/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}
