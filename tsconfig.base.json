@@ -64,6 +64,9 @@
         "realtor-management/offer-struct/src/index.ts"
       ],
       "@ga/pub-sub": ["pub-sub/create-topic-api/src/index.ts"],
+      "@ga/publish-offer-api-in-remote-offer-register": [
+        "remote-offer-register/publish-offer-api/src/index.ts"
+      ],
       "@ga/realtor-added-observable-in-realtor-registry": [
         "realtor-registry/observables/realtor-added/src/index.ts"
       ],
