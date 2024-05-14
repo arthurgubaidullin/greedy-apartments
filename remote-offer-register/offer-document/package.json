@@ -2,7 +2,9 @@
   "name": "@ga/offer-document-in-remote-offer-register",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "io-ts": "^2.2.21",
+    "@ga/offer-id-in-remote-offer-register": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
