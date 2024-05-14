@@ -20,8 +20,8 @@ const getOfferDB = (
   return realtorDb;
 };
 
-export const get = (realtorId: ServiceId.ServiceId) => {
-  const db = getOfferDB(realtorId);
+export const get = (id: ServiceId.ServiceId) => {
+  const db = getOfferDB(id);
 
   return {
     create: (document: OfferDocument.OfferDocument): void => {
