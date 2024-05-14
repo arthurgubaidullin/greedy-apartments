@@ -1,6 +1,6 @@
 import * as OfferId from '@ga/offer-id';
 import * as RealtorId from '@ga/realtor-id';
-import * as _Eq from 'fp-ts/lib/Eq';
+import * as _Eq from 'fp-ts/Eq';
 import * as t from 'io-ts';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
