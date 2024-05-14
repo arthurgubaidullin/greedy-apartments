@@ -17,6 +17,10 @@
                 "onlyDependOnLibsWithTags": []
               },
               {
+                "sourceTag": "*",
+                "bannedExternalImports": ["fp-ts/lib/*", "io-ts/lib/*"]
+              },
+              {
                 "sourceTag": "tier:lib",
                 "onlyDependOnLibsWithTags": ["tier:lib"]
               },
