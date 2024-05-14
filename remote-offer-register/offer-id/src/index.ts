@@ -1,1 +1,1 @@
-export * from './lib/offer-id-in-remote-offer-register';
+export * from './lib/offer-id';
