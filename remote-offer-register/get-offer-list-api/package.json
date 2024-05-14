@@ -2,7 +2,10 @@
   "name": "@ga/get-offer-list-api-in-remote-offer-register",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@ga/offer-document-in-remote-offer-register": "0.0.1",
+    "@ga/offer-repository-in-remote-offer-register": "0.0.1",
+    "@ga/service-id-in-remote-offer-register": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
