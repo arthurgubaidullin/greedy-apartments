@@ -65,6 +65,14 @@
                   "slice:apis",
                   "slice:common"
                 ]
+              },
+              {
+                "sourceTag": "slice:remote-offer-register",
+                "onlyDependOnLibsWithTags": [
+                  "slice:remote-offer-register",
+                  "slice:apis",
+                  "slice:common"
+                ]
               }
             ]
           }
