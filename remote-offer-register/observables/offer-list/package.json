@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
-    "@ga/offer-document-in-remote-offer-register": "0.0.1",
     "fp-ts": "^2.16.5",
-    "mobx": "^6.12.3"
+    "mobx": "^6.12.3",
+    "@ga/offer-struct-in-remote-offer-register": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
