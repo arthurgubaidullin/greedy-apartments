@@ -1,5 +1,6 @@
 import * as OfferDocument from '@ga/offer-document-in-remote-offer-register';
 import * as OfferList from '@ga/offer-list-observable-in-remote-offer-register';
+import * as OfferAdded from '@ga/offer-added-observable-in-remote-offer-register';
 import * as OfferStruct from '@ga/offer-struct-in-remote-offer-register';
 import { publishOfferApi } from '@ga/publish-offer-api-in-remote-offer-register';
 import * as ServiceId from '@ga/service-id-in-remote-offer-register';
@@ -25,8 +26,9 @@ interface OfferListObservable {
 type Service = PublishOffer & OfferListObservable;
 
 export const get = (id: ServiceId.ServiceId) => {
+  const offerAdded = OfferAdded.getOfferAdded();
   const publishOffer = publishOfferApi(id);
-  const offerList = OfferList.getOfferList(id);
+  const offerList = OfferList.getOfferList(id)(offerAdded);
 
   return {
     offerList,

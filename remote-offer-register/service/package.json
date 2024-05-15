@@ -9,7 +9,8 @@
     "@ga/publish-offer-api-in-remote-offer-register": "0.0.1",
     "@ga/service-id-in-remote-offer-register": "0.0.1",
     "fp-ts": "^2.16.5",
-    "mobx": "^6.12.3"
+    "mobx": "^6.12.3",
+    "@ga/offer-added-observable-in-remote-offer-register": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
