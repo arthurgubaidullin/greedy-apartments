@@ -2,7 +2,12 @@
   "name": "@ga/service-in-realtor-management",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@ga/offet-struct-in-realtor-management": "0.0.1",
+    "mobx": "^6.12.3",
+    "fp-ts": "^2.16.5",
+    "@ga/offet-list-observable-in-realtor-management": "0.0.1",
+    "@ga/create-offer-in-realtor-management": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
