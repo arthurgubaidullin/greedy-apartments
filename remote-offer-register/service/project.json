@@ -3,7 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "remote-offer-register/service/src",
   "projectType": "library",
-  "tags": [],
+  "tags": ["slice:remote-offer-register", "slice:apis", "tier:api"],
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
