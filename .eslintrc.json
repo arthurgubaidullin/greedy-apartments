@@ -13,10 +13,6 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "",
-                "onlyDependOnLibsWithTags": []
-              },
-              {
                 "sourceTag": "*",
                 "bannedExternalImports": ["fp-ts/lib/*", "io-ts/lib/*"]
               },
