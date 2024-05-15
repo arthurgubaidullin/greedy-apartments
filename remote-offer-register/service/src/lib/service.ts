@@ -26,8 +26,8 @@ interface OfferListObservable {
 type Service = PublishOffer & OfferListObservable;
 
 export const get = (id: ServiceId.ServiceId) => {
-  const offerAdded = OfferAdded.getOfferAdded();
-  const publishOffer = publishOfferApi(id);
+  const offerAdded = OfferAdded.get();
+  const publishOffer = publishOfferApi(id)(offerAdded.publish);
   const offerList = OfferList.getOfferList(id)(offerAdded);
 
   return {

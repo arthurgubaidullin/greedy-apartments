@@ -6,6 +6,11 @@ import { pipe } from 'fp-ts/function';
 
 export const publishOfferApi =
   (id: ServiceId.ServiceId) =>
+  (publish: (data: OfferDocument.OfferDocument) => void) =>
   (data: OfferDocument.OfferDocument): OfferDocument.OfferDocument => {
-    return pipe(data, I.chainFirst(Repository.get(id).create));
+    return pipe(
+      data,
+      I.chainFirst(Repository.get(id).create),
+      I.chainFirst(publish)
+    );
   };
