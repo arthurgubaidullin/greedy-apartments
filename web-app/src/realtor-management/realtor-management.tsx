@@ -1,4 +1,4 @@
-import * as Service from '@ga/service-in-realtor-management';
+import * as OfferService from '@ga/service-in-realtor-management';
 import * as E from 'fp-ts/Either';
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
@@ -6,7 +6,7 @@ import { flow, identity, pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';
 import { observer } from 'mobx-react-lite';
 
-const service = Service.get();
+const offerService = OfferService.get();
 
 export const NewOfferForm = observer(() => {
   return (
@@ -39,7 +39,7 @@ export const NewOfferForm = observer(() => {
                 )
               )
             ),
-            E.map((a) => service.createOffer(a)),
+            E.map((a) => offerService.createOffer(a)),
             E.fold((e) => {
               console.error(e);
             }, identity)
@@ -62,13 +62,20 @@ export const NewOfferForm = observer(() => {
 
 export const OfferList = observer(() => {
   return pipe(
-    service.offerList.get(),
+    offerService.offerList.get(),
     O.fold(
       () => <p>No offers!</p>,
       flow(
         RNEA.map((offer) => <li key={String(offer.id)}>{offer.name}</li>),
         (list) => <ul>{list}</ul>
       )
+    ),
+    (list) => (
+      <div>
+        <h2>Offer list</h2>
+
+        {list}
+      </div>
     )
   );
 });
