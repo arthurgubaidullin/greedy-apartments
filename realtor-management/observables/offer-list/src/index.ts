@@ -1,1 +1,1 @@
-export * from './lib/offet-list-observable';
+export * from './lib/offer-list-observable';
