@@ -35,6 +35,9 @@
       "@ga/get-realtor-list-api-in-realtor-registry": [
         "realtor-registry/get-realtor-list-api/src/index.ts"
       ],
+      "@ga/offer-added-observable-in-realtor-management": [
+        "realtor-management/observables/offer-added/src/index.ts"
+      ],
       "@ga/offer-added-observable-in-remote-offer-register": [
         "remote-offer-register/observables/offer-added/src/index.ts"
       ],
