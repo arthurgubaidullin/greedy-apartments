@@ -26,7 +26,7 @@ export const get = () => {
   const _offerAdded = OfferAdded.get();
 
   return {
-    offerList: OfferList.offerList,
+    offerList: OfferList.get(_offerAdded),
     createOffer: createOfferApi(_offerAdded.publish),
   } as const satisfies Service;
 };
