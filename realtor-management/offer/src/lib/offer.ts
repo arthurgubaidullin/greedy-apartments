@@ -11,7 +11,7 @@ const Offer = t.readonly(
   })
 );
 
-export type SimplifiedOffer = t.TypeOf<typeof Offer>;
+type SimplifiedOffer = t.TypeOf<typeof Offer>;
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface Offer
