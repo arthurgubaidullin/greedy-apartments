@@ -10,7 +10,7 @@ const _getOfferAdded = () =>
     equals: O.getEq(OfferStruct.Eq).equals,
   } satisfies _Eq.Eq<T>);
 
-export const publish = (store: IObservableValue<T>) =>
+const publish = (store: IObservableValue<T>) =>
   action((data: OfferStruct.OfferStruct) => {
     store.set(O.some(data));
   });
