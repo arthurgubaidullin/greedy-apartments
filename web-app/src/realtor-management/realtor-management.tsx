@@ -8,7 +8,7 @@ import { observer } from 'mobx-react-lite';
 
 const service = Service.get();
 
-export function NewOfferForm() {
+export const NewOfferForm = observer(() => {
   return (
     <div>
       <h2>New Offer form</h2>
@@ -58,9 +58,9 @@ export function NewOfferForm() {
       </form>
     </div>
   );
-}
+});
 
-export function OfferList() {
+export const OfferList = observer(() => {
   return pipe(
     service.offerList.get(),
     O.fold(
@@ -71,7 +71,7 @@ export function OfferList() {
       )
     )
   );
-}
+});
 
 export const RealtorManagement = observer(() => {
   return (
