@@ -1,18 +1,12 @@
 import * as OfferId from '@ga/offer-id';
-import * as RealtorId from '@ga/realtor-id';
 import { pipe } from 'fp-ts/function';
 import * as t from 'io-ts';
 import { fromNewtype } from 'io-ts-types';
 import * as Newtype from 'newtype-ts';
 
-export function offerInRealtorManagement(): string {
-  return 'offer-in-realtor-management';
-}
-
 const Offer = t.readonly(
   t.strict({
     id: OfferId.codec,
-    realtorId: RealtorId.codec,
     name: t.string,
   })
 );

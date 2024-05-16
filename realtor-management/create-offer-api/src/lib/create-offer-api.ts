@@ -6,5 +6,5 @@ import * as OfferRepository from '@ga/offer-repository-in-realtor-management';
 import { pipe } from 'fp-ts/function';
 
 export const createOfferApi = (data: CreateOffer): void => {
-  return pipe(createOffer(data), OfferRepository.get(data.realtorId).create);
+  return pipe(createOffer(data), OfferRepository.get().create);
 };
