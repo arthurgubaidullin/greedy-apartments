@@ -1,6 +1,8 @@
 import * as Service from '@ga/service-in-realtor-management';
 import * as E from 'fp-ts/Either';
-import { identity, pipe } from 'fp-ts/function';
+import * as O from 'fp-ts/Option';
+import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
+import { flow, identity, pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';
 import { observer } from 'mobx-react-lite';
 
@@ -59,7 +61,16 @@ export function NewOfferForm() {
 }
 
 export function OfferList() {
-  return <div></div>;
+  return pipe(
+    service.offerList.get(),
+    O.fold(
+      () => <p>No offers!</p>,
+      flow(
+        RNEA.map((offer) => <li key={String(offer.id)}>{offer.name}</li>),
+        (list) => <ul>{list}</ul>
+      )
+    )
+  );
 }
 
 export const RealtorManagement = observer(() => {
