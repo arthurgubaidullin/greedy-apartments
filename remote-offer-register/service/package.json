@@ -10,7 +10,10 @@
     "@ga/service-id-in-remote-offer-register": "0.0.1",
     "fp-ts": "^2.16.5",
     "mobx": "^6.12.3",
-    "@ga/offer-added-observable-in-remote-offer-register": "0.0.1"
+    "@ga/offer-added-observable-in-remote-offer-register": "0.0.1",
+    "@ga/change-service-api-in-remote-offer-register": "0.0.1",
+    "@ga/current-service-observable-in-remote-offer-register": "0.0.1",
+    "io-ts-types": "^0.5.19"
   },
   "type": "commonjs",
   "main": "./src/index.js",

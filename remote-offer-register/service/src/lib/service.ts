@@ -18,7 +18,7 @@ interface ChangeService {
 interface PublishOffer {
   readonly publishOffer: (
     data: OfferDocument.OfferDocument
-  ) => OfferDocument.OfferDocument;
+  ) => O.Option<OfferDocument.OfferDocument>;
 }
 
 interface OfferListObservable {
@@ -38,7 +38,7 @@ export const get = (id: ServiceId.ServiceId) => {
 
   const offerAdded = OfferAdded.get();
 
-  const publishOffer = publishOfferApi(id)(offerAdded.publish);
+  const publishOffer = publishOfferApi(currentService)(offerAdded.publish);
 
   const offerList = OfferList.getOfferList(id)(offerAdded);
 
