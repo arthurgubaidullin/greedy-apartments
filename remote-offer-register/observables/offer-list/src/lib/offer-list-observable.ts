@@ -1,9 +1,12 @@
+import { getOfferListApi } from '@ga/get-offer-list-api-in-remote-offer-register';
 import * as OfferStruct from '@ga/offer-struct-in-remote-offer-register';
 import * as ServiceId from '@ga/service-id-in-remote-offer-register';
 import * as _Eq from 'fp-ts/Eq';
+import * as I from 'fp-ts/Identity';
 import * as O from 'fp-ts/Option';
-import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import * as RA from 'fp-ts/ReadonlyArray';
+import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
+import { constVoid, pipe } from 'fp-ts/function';
 import {
   IObservableValue,
   action,
@@ -11,8 +14,10 @@ import {
   observable,
   onBecomeObserved,
 } from 'mobx';
-import { getOfferListApi } from '@ga/get-offer-list-api-in-remote-offer-register';
-import { constVoid, pipe } from 'fp-ts/function';
+
+interface GetCurrentService {
+  readonly get: () => O.Option<ServiceId.ServiceId>;
+}
 
 type T = O.Option<RNEA.ReadonlyNonEmptyArray<OfferStruct.OfferStruct>>;
 
@@ -21,21 +26,27 @@ const createOfferList = () =>
     equals: O.getEq(RNEA.getEq(OfferStruct.Eq)).equals,
   } satisfies _Eq.Eq<T>);
 
-const update = (id: ServiceId.ServiceId) => (_offerList: IObservableValue<T>) =>
-  action((): void => {
-    pipe(getOfferListApi(id), O.fromPredicate(RA.isNonEmpty), (list) =>
-      _offerList.set(list)
-    );
-  });
+const update =
+  (currentService: GetCurrentService) => (_offerList: IObservableValue<T>) =>
+    action((): void => {
+      pipe(
+        currentService.get(),
+        O.map((id) =>
+          pipe(getOfferListApi(id), O.fromPredicate(RA.isNonEmpty), (list) =>
+            _offerList.set(list)
+          )
+        )
+      );
+    });
 
 export const getOfferList =
-  (id: ServiceId.ServiceId) =>
+  (currentService: GetCurrentService) =>
   (
     offerAdded: Pick<IObservableValue<O.Option<OfferStruct.OfferStruct>>, 'get'>
   ): Pick<IObservableValue<T>, 'get'> => {
     const _offerList = createOfferList();
 
-    const _update = update(id)(_offerList);
+    const _update = update(currentService)(_offerList);
 
     onBecomeObserved(_offerList, () => {
       _update();
@@ -43,7 +54,8 @@ export const getOfferList =
 
     autorun(() =>
       pipe(
-        offerAdded.get(),
+        currentService.get(),
+        I.map(() => offerAdded.get()),
         O.fold(constVoid, () => _update())
       )
     );

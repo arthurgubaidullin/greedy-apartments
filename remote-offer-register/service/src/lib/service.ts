@@ -5,7 +5,6 @@ import * as OfferDocument from '@ga/offer-document-in-remote-offer-register';
 import * as OfferList from '@ga/offer-list-observable-in-remote-offer-register';
 import * as OfferStruct from '@ga/offer-struct-in-remote-offer-register';
 import { publishOfferApi } from '@ga/publish-offer-api-in-remote-offer-register';
-import * as ServiceId from '@ga/service-id-in-remote-offer-register';
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import { NonEmptyString } from 'io-ts-types';
@@ -32,7 +31,7 @@ interface OfferListObservable {
 
 type Service = PublishOffer & OfferListObservable & ChangeService;
 
-export const get = (id: ServiceId.ServiceId) => {
+export const get = () => {
   const currentService = CurrentService.create();
   const changeService = changeServiceApi(currentService);
 
@@ -40,7 +39,7 @@ export const get = (id: ServiceId.ServiceId) => {
 
   const publishOffer = publishOfferApi(currentService)(offerAdded.publish);
 
-  const offerList = OfferList.getOfferList(id)(offerAdded);
+  const offerList = OfferList.getOfferList(currentService)(offerAdded);
 
   return {
     offerList,
