@@ -17,6 +17,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ga/change-service-api-in-remote-offer-register": [
+        "remote-offer-register/change-service-api/src/index.ts"
+      ],
       "@ga/create-offer-api-in-realtor-management": [
         "realtor-management/create-offer-api/src/index.ts"
       ],
