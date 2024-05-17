@@ -4,7 +4,9 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "@ga/offer-document-in-realtor-management": "0.0.1",
-    "@ga/offer-repository-in-realtor-management": "0.0.1"
+    "@ga/offer-repository-in-realtor-management": "0.0.1",
+    "@ga/offet-struct-in-realtor-management": "0.0.1",
+    "fp-ts": "^2.16.5"
   },
   "type": "commonjs",
   "main": "./src/index.js",

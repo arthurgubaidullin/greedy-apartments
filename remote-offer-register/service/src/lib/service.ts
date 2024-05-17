@@ -16,7 +16,7 @@ interface ChangeService {
 
 interface PublishOffer {
   readonly publishOffer: (
-    data: OfferDocument.OfferDocument
+    data: OfferDocument.OfferDocumentSimplifed
   ) => O.Option<OfferDocument.OfferDocument>;
 }
 
