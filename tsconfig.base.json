@@ -26,6 +26,9 @@
       "@ga/create-offer-in-realtor-management": [
         "realtor-management/create-offer/src/index.ts"
       ],
+      "@ga/current-service-observable-in-remote-offer-register": [
+        "remote-offer-register/observables/current-service/src/index.ts"
+      ],
       "@ga/get-offer-list-api-in-remote-offer-register": [
         "remote-offer-register/get-offer-list-api/src/index.ts"
       ],
