@@ -2,14 +2,14 @@ import { NonEmptyString, fromNewtype } from 'io-ts-types';
 import * as Newtype from 'newtype-ts';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface T
+export interface OfferId
   extends Newtype.Newtype<
-    { readonly RealtorId: unique symbol },
+    { readonly OfferIdInRealtorManagement: unique symbol },
     NonEmptyString
   > {}
 
-export const codec = fromNewtype<T>(NonEmptyString);
+export const codec = fromNewtype<OfferId>(NonEmptyString);
 
-const iso = Newtype.iso<T>();
+const iso = Newtype.iso<OfferId>();
 
 export const fromNonEmptyString = (s: NonEmptyString) => iso.wrap(s);

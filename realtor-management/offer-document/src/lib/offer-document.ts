@@ -20,5 +20,5 @@ export interface SimplifiedOfferDocument extends t.OutputOf<typeof codec> {}
 export const parse = (data: SimplifiedOfferDocument) =>
   pipe(data, codec.decode, E.mapLeft(failure));
 
-export const getId = (document: OfferDocument): OfferId.T =>
+export const getId = (document: OfferDocument): OfferId.OfferId =>
   pipe(document, (a) => a.id);
