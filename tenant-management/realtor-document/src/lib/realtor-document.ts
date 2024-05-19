@@ -8,3 +8,10 @@ export const codec = t.strict({
   id: RealtorId.codec,
   name: t.string,
 });
+
+export const fromSimplified = (
+  data: t.OutputOf<typeof codec>
+): RealtorDocument => ({
+  id: RealtorId.fromNonEmptyString(data.id),
+  name: data.name,
+});

@@ -5,7 +5,8 @@
     "tslib": "^2.3.0",
     "@ga/realtor-repository-in-tenant-management": "0.0.1",
     "@ga/realtor-document-in-tenant-management": "0.0.1",
-    "fp-ts": "^2.16.5"
+    "fp-ts": "^2.16.5",
+    "@ga/realtor-struct-in-tenant-management": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
