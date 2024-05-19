@@ -1,0 +1,19 @@
+{
+  "name": "realtor-id-in-realtor-registry",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "realtor-registry/realtor-id/src",
+  "projectType": "library",
+  "tags": ["slice:realtor-registry", "tier:domain"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/realtor-registry/realtor-id",
+        "main": "realtor-registry/realtor-id/src/index.ts",
+        "tsConfig": "realtor-registry/realtor-id/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}

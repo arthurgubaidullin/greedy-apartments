@@ -109,6 +109,9 @@
         "tenant-management/realtor-document/src/index.ts"
       ],
       "@ga/realtor-id": ["realtor-id/src/index.ts"],
+      "@ga/realtor-id-in-realtor-registry": [
+        "realtor-registry/realtor-id/src/index.ts"
+      ],
       "@ga/realtor-in-registry": ["realtor-registry/realtor/src/index.ts"],
       "@ga/realtor-list-observable-in-realtor-registry": [
         "realtor-registry/observables/realtor-list/src/index.ts"
