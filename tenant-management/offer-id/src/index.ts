@@ -1,1 +1,1 @@
-export * from './lib/offer-id-in-tenant-management';
+export * from './lib/offer-id';
