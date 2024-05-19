@@ -3,7 +3,7 @@ import { pipe } from 'fp-ts/function';
 import * as t from 'io-ts';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface T extends t.TypeOf<typeof codec> {}
+export interface RealtorDocument extends t.TypeOf<typeof codec> {}
 
 export type RealtorDocumentSimplified = t.OutputOf<typeof codec>;
 
@@ -14,12 +14,14 @@ export const codec = t.readonly(
   })
 );
 
-export const getRealtorId = (document: T): RealtorId.T =>
+export const getRealtorId = (document: RealtorDocument): RealtorId.T =>
   pipe(document, (a) => a.id);
 
-export const toJSON = (document: T) => codec.encode(document);
+export const toJSON = (document: RealtorDocument) => codec.encode(document);
 
-export const fromSimplified = (data: RealtorDocumentSimplified): T => ({
+export const fromSimplified = (
+  data: RealtorDocumentSimplified
+): RealtorDocument => ({
   id: RealtorId.fromNonEmptyString(data.id),
   name: data.name,
 });

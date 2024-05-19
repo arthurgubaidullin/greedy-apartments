@@ -4,7 +4,9 @@ import { pipe } from 'fp-ts/function';
 
 export type RegisterRealtor = RealtorDocument.RealtorDocumentSimplified;
 
-export const registerRealtor = (data: RegisterRealtor): RealtorDocument.T => {
+export const registerRealtor = (
+  data: RegisterRealtor
+): RealtorDocument.RealtorDocument => {
   return pipe(
     data,
     RealtorDocument.fromSimplified,
