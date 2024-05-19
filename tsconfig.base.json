@@ -142,6 +142,9 @@
       "@ga/service-in-realtor-management": [
         "realtor-management/service/src/index.ts"
       ],
+      "@ga/service-in-realtor-registry": [
+        "realtor-registry/service/src/index.ts"
+      ],
       "@ga/service-in-remote-offer-register": [
         "remote-offer-register/service/src/index.ts"
       ],

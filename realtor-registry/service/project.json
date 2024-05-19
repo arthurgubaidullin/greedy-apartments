@@ -1,0 +1,19 @@
+{
+  "name": "service-in-realtor-registry",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "realtor-registry/service/src",
+  "projectType": "library",
+  "tags": ["slice:realtor-registry", "slice:apis", "tier:api"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/realtor-registry/service",
+        "main": "realtor-registry/service/src/index.ts",
+        "tsConfig": "realtor-registry/service/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}
