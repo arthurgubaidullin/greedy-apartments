@@ -1,3 +1,3 @@
-export function serviceInTenantManagement(): string {
-  return 'service-in-tenant-management';
-}
+export const get = () => {
+  return {} as const;
+};
