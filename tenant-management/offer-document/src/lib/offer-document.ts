@@ -1,4 +1,4 @@
-import * as OfferId from '@ga/offer-id';
+import * as OfferId from '@ga/offer-id-in-tenant-management';
 import * as RealtorId from '@ga/realtor-id';
 import * as t from 'io-ts';
 
