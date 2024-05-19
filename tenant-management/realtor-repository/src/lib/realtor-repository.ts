@@ -2,7 +2,7 @@ import * as RealtorDocument from '@ga/realtor-document-in-tenant-management';
 import * as RealtorId from '@ga/realtor-id-in-tenant-management';
 import * as O from 'fp-ts/Option';
 
-const db = new Map<RealtorId.T, RealtorDocument.RealtorDocument>();
+const db = new Map<RealtorId.RealtorId, RealtorDocument.RealtorDocument>();
 
 export const get = () => {
   return {
@@ -13,7 +13,9 @@ export const get = () => {
         db.set(id, document);
       }
     },
-    get: (id: RealtorId.T): O.Option<RealtorDocument.RealtorDocument> => {
+    get: (
+      id: RealtorId.RealtorId
+    ): O.Option<RealtorDocument.RealtorDocument> => {
       return O.fromNullable(db.get(id));
     },
     update: (document: RealtorDocument.RealtorDocument) => {
