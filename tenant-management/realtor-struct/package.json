@@ -4,7 +4,8 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "io-ts": "^2.2.21",
-    "io-ts-types": "^0.5.19"
+    "io-ts-types": "^0.5.19",
+    "fp-ts": "^2.16.5"
   },
   "type": "commonjs",
   "main": "./src/index.js",
