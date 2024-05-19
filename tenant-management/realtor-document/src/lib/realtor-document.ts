@@ -1,4 +1,5 @@
 import * as RealtorId from '@ga/realtor-id-in-tenant-management';
+import * as RealtoServicerId from '@ga/realtor-service-id-in-tenant-management';
 import * as t from 'io-ts';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -7,6 +8,7 @@ export interface RealtorDocument extends t.TypeOf<typeof codec> {}
 export const codec = t.strict({
   id: RealtorId.codec,
   name: t.string,
+  serviceId: RealtoServicerId.codec,
 });
 
 export const fromSimplified = (
@@ -14,4 +16,5 @@ export const fromSimplified = (
 ): RealtorDocument => ({
   id: RealtorId.fromNonEmptyString(data.id),
   name: data.name,
+  serviceId: RealtoServicerId.fromNonEmptyString(data.serviceId),
 });
