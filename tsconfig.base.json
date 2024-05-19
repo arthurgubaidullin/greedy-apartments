@@ -92,15 +92,11 @@
       "@ga/offet-struct-in-realtor-management": [
         "realtor-management/offer-struct/src/index.ts"
       ],
-      "@ga/pub-sub": ["pub-sub/create-topic-api/src/index.ts"],
       "@ga/publish-offer-api-in-remote-offer-register": [
         "remote-offer-register/publish-offer-api/src/index.ts"
       ],
       "@ga/realtor-added-observable-in-realtor-registry": [
         "realtor-registry/observables/realtor-added/src/index.ts"
-      ],
-      "@ga/realtor-changes-in-registry": [
-        "realtor-registry/realtor-changes/src/index.ts"
       ],
       "@ga/realtor-document-in-registry": [
         "realtor-registry/realtor-document/src/index.ts"
@@ -147,9 +143,6 @@
       ],
       "@ga/service-in-remote-offer-register": [
         "remote-offer-register/service/src/index.ts"
-      ],
-      "@ga/subscribe-to-realtor-registry-api-in-tenant-management": [
-        "tenant-management/subscribe-to-realtor-registry-api/src/index.ts"
       ],
       "@ga/update-realtor-document-in-tenant-management": [
         "tenant-management/update-realtor-document/src/index.ts"
