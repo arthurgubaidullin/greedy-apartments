@@ -5,7 +5,9 @@ import * as O from 'fp-ts/Option';
 
 const repository = RealtorRepository.get();
 
-export const updateRealtorDocument = (document: RealtorDocument.T): void => {
+export const updateRealtorDocument = (
+  document: RealtorDocument.RealtorDocument
+): void => {
   return pipe(
     repository.get(document.id),
     O.fold(
