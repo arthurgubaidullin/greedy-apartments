@@ -1,5 +1,5 @@
 import * as RealtorDocument from '@ga/realtor-document-in-tenant-management';
-import * as RealtorId from '@ga/realtor-id';
+import * as RealtorId from '@ga/realtor-id-in-tenant-management';
 import * as O from 'fp-ts/Option';
 
 const db = new Map<RealtorId.T, RealtorDocument.RealtorDocument>();

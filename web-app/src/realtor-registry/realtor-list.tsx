@@ -1,4 +1,4 @@
-import * as RealtorId from '@ga/realtor-id';
+import * as RealtorId from '@ga/realtor-id-in-tenant-management';
 import { realtorList } from '@ga/realtor-list-observable-in-realtor-registry';
 import * as O from 'fp-ts/Option';
 import * as RA from 'fp-ts/ReadonlyArray';

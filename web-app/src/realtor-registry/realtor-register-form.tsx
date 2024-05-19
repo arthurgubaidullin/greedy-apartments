@@ -1,4 +1,4 @@
-import * as RealtorId from '@ga/realtor-id';
+import * as RealtorId from '@ga/realtor-id-in-tenant-management';
 import { registerRealtorApi } from '@ga/register-realtor-api-in-registry';
 import * as E from 'fp-ts/Either';
 import { pipe } from 'fp-ts/function';

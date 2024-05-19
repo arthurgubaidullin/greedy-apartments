@@ -1,5 +1,5 @@
 import * as OfferId from '@ga/offer-id-in-tenant-management';
-import * as RealtorId from '@ga/realtor-id';
+import * as RealtorId from '@ga/realtor-id-in-tenant-management';
 import * as t from 'io-ts';
 
 const OfferDocument = t.strict({
