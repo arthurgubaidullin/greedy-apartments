@@ -1,10 +1,10 @@
+import * as E from 'fp-ts/Either';
+import * as _Eq from 'fp-ts/Eq';
 import { pipe } from 'fp-ts/function';
+import * as S from 'fp-ts/string';
 import { NonEmptyString, fromNewtype } from 'io-ts-types';
 import * as Newtype from 'newtype-ts';
-import * as E from 'fp-ts/Either';
-import * as S from 'fp-ts/string';
 import { FailedToCreateRealtorId } from './failed-to-create-realtor-id';
-import * as _Eq from 'fp-ts/Eq';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface RealtorId
