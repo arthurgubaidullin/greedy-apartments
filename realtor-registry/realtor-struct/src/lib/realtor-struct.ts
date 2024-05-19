@@ -1,9 +1,9 @@
-import * as RealtorId from '@ga/realtor-id';
 import * as _Eq from 'fp-ts/Eq';
 import * as t from 'io-ts';
+import { NonEmptyString } from 'io-ts-types';
 
 const RealtorStruct = t.strict({
-  id: RealtorId.codec,
+  id: NonEmptyString,
   name: t.string,
 });
 

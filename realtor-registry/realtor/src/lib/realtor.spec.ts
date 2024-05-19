@@ -1,6 +1,6 @@
 import { pipe } from 'fp-ts/function';
 import * as Realtor from './realtor';
-import * as RealtorId from '@ga/realtor-id';
+import * as RealtorId from '@ga/realtor-id-in-realtor-registry';
 import * as E from 'fp-ts/Either';
 
 describe('realtor-in-registry', () => {
