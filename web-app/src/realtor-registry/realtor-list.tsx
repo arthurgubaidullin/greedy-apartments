@@ -1,4 +1,3 @@
-import * as RealtorId from '@ga/realtor-id-in-tenant-management';
 import { realtorList } from '@ga/realtor-list-observable-in-realtor-registry';
 import * as O from 'fp-ts/Option';
 import * as RA from 'fp-ts/ReadonlyArray';
@@ -15,9 +14,9 @@ export const RealtorList = observer(() => {
           {pipe(
             list,
             RA.map((item) => (
-              <li key={RealtorId.toString(item.id)}>
+              <li key={item.id}>
                 <div>
-                  id: {RealtorId.toString(item.id)}
+                  id: {item.id}
                   <br />
                   name: {item.name}
                 </div>

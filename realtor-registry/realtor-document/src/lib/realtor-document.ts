@@ -5,6 +5,8 @@ import * as t from 'io-ts';
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface T extends t.TypeOf<typeof codec> {}
 
+export type RealtorDocumentSimplified = t.OutputOf<typeof codec>;
+
 export const codec = t.readonly(
   t.strict({
     id: RealtorId.codec,
@@ -16,3 +18,8 @@ export const getRealtorId = (document: T): RealtorId.T =>
   pipe(document, (a) => a.id);
 
 export const toJSON = (document: T) => codec.encode(document);
+
+export const fromSimplified = (data: RealtorDocumentSimplified): T => ({
+  id: RealtorId.fromNonEmptyString(data.id),
+  name: data.name,
+});
