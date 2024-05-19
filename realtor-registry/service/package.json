@@ -4,7 +4,8 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "@ga/register-realtor-api-in-registry": "0.0.1",
-    "@ga/realtor-list-observable-in-realtor-registry": "0.0.1"
+    "@ga/realtor-list-observable-in-realtor-registry": "0.0.1",
+    "@ga/realtor-added-observable-in-realtor-registry": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
