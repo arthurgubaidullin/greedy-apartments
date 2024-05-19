@@ -1,1 +1,1 @@
-export * from './lib/service-in-realtor-registry';
+export * from './lib/service';
