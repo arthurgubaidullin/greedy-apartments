@@ -1,5 +1,5 @@
 import * as OfferDocument from '@ga/offer-document-in-realtor-management';
-import * as OfferId from '@ga/offer-id';
+import * as OfferId from '@ga/offer-id-in-realtor-management';
 
 const db: Map<OfferId.T, OfferDocument.OfferDocument> = new Map();
 

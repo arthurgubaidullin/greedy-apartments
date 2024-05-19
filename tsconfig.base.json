@@ -59,7 +59,9 @@
       "@ga/offer-document-in-tenant-management": [
         "tenant-management/offer-document/src/index.ts"
       ],
-      "@ga/offer-id": ["offer-id/src/index.ts"],
+      "@ga/offer-id-in-realtor-management": [
+        "realtor-management/offer-id/src/index.ts"
+      ],
       "@ga/offer-id-in-remote-offer-register": [
         "remote-offer-register/offer-id/src/index.ts"
       ],

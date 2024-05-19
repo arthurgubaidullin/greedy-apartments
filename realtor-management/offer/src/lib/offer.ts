@@ -1,4 +1,4 @@
-import * as OfferId from '@ga/offer-id';
+import * as OfferId from '@ga/offer-id-in-realtor-management';
 import { pipe } from 'fp-ts/function';
 import * as t from 'io-ts';
 import { fromNewtype } from 'io-ts-types';
