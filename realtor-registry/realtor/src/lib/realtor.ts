@@ -14,13 +14,14 @@ const Realtor = t.readonly(
 export type Simplified = t.TypeOf<typeof Realtor>;
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface T
+export interface Realtor
   extends Newtype.Newtype<{ readonly Realtor: unique symbol }, Simplified> {}
 
-export const codec = fromNewtype<T>(Realtor);
+export const codec = fromNewtype<Realtor>(Realtor);
 
-const iso = Newtype.iso<T>();
+const iso = Newtype.iso<Realtor>();
 
-export const create = (data: Simplified): T => pipe(data, iso.wrap);
+export const create = (data: Simplified): Realtor => pipe(data, iso.wrap);
 
-export const toJSON = (document: T): Simplified => pipe(document, iso.unwrap);
+export const toJSON = (document: Realtor): Simplified =>
+  pipe(document, iso.unwrap);
