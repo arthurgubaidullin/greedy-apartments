@@ -147,6 +147,9 @@
       "@ga/service-in-remote-offer-register": [
         "remote-offer-register/service/src/index.ts"
       ],
+      "@ga/service-in-tenant-management": [
+        "tenant-management/service/src/index.ts"
+      ],
       "@ga/update-realtor-document-in-tenant-management": [
         "tenant-management/update-realtor-document/src/index.ts"
       ]
