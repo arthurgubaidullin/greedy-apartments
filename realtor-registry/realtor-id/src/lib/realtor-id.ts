@@ -7,25 +7,27 @@ import { FailedToCreateRealtorId } from './failed-to-create-realtor-id';
 import * as _Eq from 'fp-ts/Eq';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface T
+export interface RealtorId
   extends Newtype.Newtype<
     { readonly RealtorId: unique symbol },
     NonEmptyString
   > {}
 
-export const codec = fromNewtype<T>(NonEmptyString);
+export const codec = fromNewtype<RealtorId>(NonEmptyString);
 
-export const Eq: _Eq.Eq<T> = Newtype.getEq<T>(S.Eq);
+export const Eq: _Eq.Eq<RealtorId> = Newtype.getEq<RealtorId>(S.Eq);
 
-const iso = Newtype.iso<T>();
+const iso = Newtype.iso<RealtorId>();
 
 export const fromNonEmptyString = (s: NonEmptyString) => iso.wrap(s);
 
-export const fromString = (s: string): E.Either<FailedToCreateRealtorId, T> =>
+export const fromString = (
+  s: string
+): E.Either<FailedToCreateRealtorId, RealtorId> =>
   pipe(
     s,
     E.fromPredicate(NonEmptyString.is, () => new FailedToCreateRealtorId()),
     E.map(fromNonEmptyString)
   );
 
-export const toString = (id: T): NonEmptyString => iso.unwrap(id);
+export const toString = (id: RealtorId): NonEmptyString => iso.unwrap(id);

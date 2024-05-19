@@ -14,7 +14,7 @@ export const codec = t.readonly(
   })
 );
 
-export const getRealtorId = (document: RealtorDocument): RealtorId.T =>
+export const getRealtorId = (document: RealtorDocument): RealtorId.RealtorId =>
   pipe(document, (a) => a.id);
 
 export const toJSON = (document: RealtorDocument) => codec.encode(document);

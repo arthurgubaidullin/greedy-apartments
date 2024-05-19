@@ -1,7 +1,7 @@
 import * as RealtorDocument from '@ga/realtor-document-in-registry';
 import * as RealtorId from '@ga/realtor-id-in-realtor-registry';
 
-const db = new Map<RealtorId.T, RealtorDocument.RealtorDocument>();
+const db = new Map<RealtorId.RealtorId, RealtorDocument.RealtorDocument>();
 
 export const getRealtorRepository = () => {
   return {
