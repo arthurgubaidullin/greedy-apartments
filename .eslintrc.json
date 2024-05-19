@@ -50,32 +50,28 @@
                 "sourceTag": "slice:realtor-registry",
                 "onlyDependOnLibsWithTags": [
                   "slice:realtor-registry",
-                  "slice:apis",
-                  "slice:common"
+                  "slice:apis"
                 ]
               },
               {
                 "sourceTag": "slice:realtor-management",
                 "onlyDependOnLibsWithTags": [
                   "slice:realtor-management",
-                  "slice:apis",
-                  "slice:common"
+                  "slice:apis"
                 ]
               },
               {
                 "sourceTag": "slice:tenant-management",
                 "onlyDependOnLibsWithTags": [
                   "slice:tenant-management",
-                  "slice:apis",
-                  "slice:common"
+                  "slice:apis"
                 ]
               },
               {
                 "sourceTag": "slice:remote-offer-register",
                 "onlyDependOnLibsWithTags": [
                   "slice:remote-offer-register",
-                  "slice:apis",
-                  "slice:common"
+                  "slice:apis"
                 ]
               }
             ]
