@@ -1,0 +1,19 @@
+{
+  "name": "offer-list-in-tenant-management",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tenant-management/observables/offer-list/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/tenant-management/observables/offer-list",
+        "main": "tenant-management/observables/offer-list/src/index.ts",
+        "tsConfig": "tenant-management/observables/offer-list/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}

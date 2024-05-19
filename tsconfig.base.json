@@ -71,6 +71,9 @@
       "@ga/offer-in-realtor-management": [
         "realtor-management/offer/src/index.ts"
       ],
+      "@ga/offer-list-in-tenant-management": [
+        "tenant-management/observables/offer-list/src/index.ts"
+      ],
       "@ga/offer-list-observable-in-remote-offer-register": [
         "remote-offer-register/observables/offer-list/src/index.ts"
       ],
