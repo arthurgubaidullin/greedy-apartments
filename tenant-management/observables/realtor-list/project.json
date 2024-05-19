@@ -1,0 +1,19 @@
+{
+  "name": "realtor-list-in-tenant-management",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tenant-management/observables/realtor-list/src",
+  "projectType": "library",
+  "tags": ["slice:tenant-management", "tier:api"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/tenant-management/observables/realtor-list",
+        "main": "tenant-management/observables/realtor-list/src/index.ts",
+        "tsConfig": "tenant-management/observables/realtor-list/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}

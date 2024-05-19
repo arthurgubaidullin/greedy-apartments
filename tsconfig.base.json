@@ -111,6 +111,9 @@
         "tenant-management/realtor-id/src/index.ts"
       ],
       "@ga/realtor-in-registry": ["realtor-registry/realtor/src/index.ts"],
+      "@ga/realtor-list-in-tenant-management": [
+        "tenant-management/observables/realtor-list/src/index.ts"
+      ],
       "@ga/realtor-list-observable-in-realtor-registry": [
         "realtor-registry/observables/realtor-list/src/index.ts"
       ],
