@@ -3,7 +3,7 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "tenant-management/observables/offer-list/src",
   "projectType": "library",
-  "tags": [],
+  "tags": ["slice:tenant-management", "tier:api"],
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
