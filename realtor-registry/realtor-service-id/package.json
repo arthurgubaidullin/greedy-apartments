@@ -2,7 +2,10 @@
   "name": "@ga/realtor-service-id-in-realtor-registry",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "fp-ts": "^2.16.5",
+    "io-ts-types": "^0.5.19",
+    "newtype-ts": "^0.3.5"
   },
   "type": "commonjs",
   "main": "./src/index.js",
