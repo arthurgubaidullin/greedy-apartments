@@ -1,1 +1,2 @@
-export * from './lib/realtor-id-in-realtor-registry';
+export * from './lib/realtor-id';
+export * from './lib/failed-to-create-realtor-id';
