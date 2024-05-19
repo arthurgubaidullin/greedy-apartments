@@ -34,6 +34,15 @@ export function RealtorRegisterForm() {
                 )
               )
             ),
+            E.bindW('serviceId', () =>
+              pipe(
+                formData.get('service-id'),
+                E.fromPredicate(
+                  NonEmptyString.is,
+                  () => new Error('Invalid realtor service ID.')
+                )
+              )
+            ),
             E.map(registerRealtorApi),
             E.fold(
               (e) => {
@@ -54,6 +63,10 @@ export function RealtorRegisterForm() {
         <label>
           Name:
           <input type="text" name="name" defaultValue={'test'} required />
+        </label>
+        <label>
+          Service ID:
+          <input type="text" name="service-id" defaultValue={'test'} required />
         </label>
         <br />
         <input type="submit" />
