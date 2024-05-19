@@ -1,13 +1,13 @@
-import * as Service from '@ga/service-in-tenant-management';
+import * as TenantManagementService from '@ga/service-in-tenant-management';
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import { pipe } from 'fp-ts/function';
 
-const service = Service.get();
+const tenantManagementService = TenantManagementService.get();
 
 export const RealtorList = () => {
   const list = pipe(
-    service.realtorList.get(),
+    tenantManagementService.realtorList.get(),
     O.fold(
       () => <p>No realtors.</p>,
       (list) =>
@@ -30,7 +30,7 @@ export const RealtorList = () => {
 
 export const OfferList = () => {
   const list = pipe(
-    service.offerList.get(),
+    tenantManagementService.offerList.get(),
     O.fold(
       () => <p>No offers.</p>,
       (list) =>
