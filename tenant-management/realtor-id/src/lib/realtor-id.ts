@@ -9,7 +9,7 @@ import * as _Eq from 'fp-ts/Eq';
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface RealtorId
   extends Newtype.Newtype<
-    { readonly RealtorIdInTenantManagement: unique symbol },
+    { readonly RealtorId: unique symbol },
     NonEmptyString
   > {}
 

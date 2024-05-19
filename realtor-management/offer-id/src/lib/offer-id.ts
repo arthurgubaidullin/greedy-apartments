@@ -4,7 +4,7 @@ import * as Newtype from 'newtype-ts';
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface OfferId
   extends Newtype.Newtype<
-    { readonly OfferIdInRealtorManagement: unique symbol },
+    { readonly OfferId: unique symbol },
     NonEmptyString
   > {}
 
