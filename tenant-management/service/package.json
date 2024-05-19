@@ -4,7 +4,8 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "@ga/realtor-list-in-tenant-management": "0.0.1",
-    "@ga/offer-list-in-tenant-management": "0.0.1"
+    "@ga/offer-list-in-tenant-management": "0.0.1",
+    "@ga/service-in-realtor-registry": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
