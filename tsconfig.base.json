@@ -159,6 +159,9 @@
       "@ga/service-in-tenant-management": [
         "tenant-management/service/src/index.ts"
       ],
+      "@ga/service-list-observable-in-tenant-management": [
+        "tenant-management/observables/service-list/src/index.ts"
+      ],
       "@ga/update-realtor-api-in-tenant-management": [
         "tenant-management/update-realtor-api/src/index.ts"
       ]
