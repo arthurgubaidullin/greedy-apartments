@@ -1,5 +1,6 @@
 import * as RealtorId from '@ga/realtor-id-in-tenant-space';
 import * as RealtoServicerId from '@ga/realtor-service-id-in-tenant-space';
+import { pipe } from 'fp-ts/function';
 import * as t from 'io-ts';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -18,3 +19,6 @@ export const fromSimplified = (
   name: data.name,
   serviceId: RealtoServicerId.fromNonEmptyString(data.serviceId),
 });
+
+export const toJSON = (document: RealtorDocument) =>
+  pipe(document, codec.encode);
