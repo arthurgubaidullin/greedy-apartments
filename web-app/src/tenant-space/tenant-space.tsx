@@ -1,9 +1,10 @@
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import { pipe } from 'fp-ts/function';
+import { observer } from 'mobx-react-lite';
 import * as P from '../program/program';
 
-export const RealtorList = () => {
+export const RealtorList = observer(() => {
   const list = pipe(
     P.tenantManagement.realtorList.get(),
     O.fold(
@@ -24,9 +25,9 @@ export const RealtorList = () => {
       {list}
     </div>
   );
-};
+});
 
-export const OfferList = () => {
+export const OfferList = observer(() => {
   const list = pipe(
     P.tenantManagement.offerList.get(),
     O.fold(
@@ -47,9 +48,9 @@ export const OfferList = () => {
       {list}
     </div>
   );
-};
+});
 
-export function TenantSpace() {
+export const TenantSpace = observer(() => {
   return (
     <div>
       <h1>Tenant Management</h1>
@@ -59,6 +60,6 @@ export function TenantSpace() {
       <OfferList />
     </div>
   );
-}
+});
 
 export default TenantSpace;
