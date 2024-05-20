@@ -162,6 +162,9 @@
       "@ga/service-in-tenant-management": [
         "tenant-management/service/src/index.ts"
       ],
+      "@ga/subscribe-to-realtor-register-api-in-tenant-management": [
+        "tenant-management/subscribe-to-realtor-register-api/src/index.ts"
+      ],
       "@ga/update-realtor-api-in-tenant-management": [
         "tenant-management/update-realtor-api/src/index.ts"
       ]
