@@ -57,7 +57,7 @@
         "remote-offer-register/offer-document/src/index.ts"
       ],
       "@ga/offer-document-in-tenant-space": [
-        "tenant-space/offer-document/src/index.ts"
+        "tenant-space/offers/offer-document/src/index.ts"
       ],
       "@ga/offer-id-in-realtor-management": [
         "realtor-management/offer-id/src/index.ts"
