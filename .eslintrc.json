@@ -70,6 +70,10 @@
                   "slice:remote-offer-register",
                   "slice:apis"
                 ]
+              },
+              {
+                "sourceTag": "slice:app",
+                "onlyDependOnLibsWithTags": ["slice:app", "slice:apis"]
               }
             ]
           }
