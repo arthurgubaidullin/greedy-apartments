@@ -1,0 +1,14 @@
+{
+  "name": "@ga/realtor-repository-in-tenant-space",
+  "version": "0.0.1",
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "@ga/realtor-document-in-tenant-space": "0.0.1",
+    "fp-ts": "^2.16.5",
+    "@ga/realtor-id-in-tenant-space": "0.0.1"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "private": true
+}

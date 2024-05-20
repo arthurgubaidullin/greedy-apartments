@@ -61,11 +61,8 @@
                 ]
               },
               {
-                "sourceTag": "slice:tenant-management",
-                "onlyDependOnLibsWithTags": [
-                  "slice:tenant-management",
-                  "slice:apis"
-                ]
+                "sourceTag": "slice:tenant-space",
+                "onlyDependOnLibsWithTags": ["slice:tenant-space", "slice:apis"]
               },
               {
                 "sourceTag": "slice:remote-offer-register",

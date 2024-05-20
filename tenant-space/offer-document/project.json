@@ -1,0 +1,19 @@
+{
+  "name": "offer-document-in-tenant-space",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tenant-space/offer-document/src",
+  "projectType": "library",
+  "tags": ["slice:tenant-space", "tier:use-case"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/tenant-space/offer-document",
+        "main": "tenant-space/offer-document/src/index.ts",
+        "tsConfig": "tenant-space/offer-document/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}

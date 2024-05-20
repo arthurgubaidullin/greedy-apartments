@@ -56,8 +56,8 @@
       "@ga/offer-document-in-remote-offer-register": [
         "remote-offer-register/offer-document/src/index.ts"
       ],
-      "@ga/offer-document-in-tenant-management": [
-        "tenant-management/offer-document/src/index.ts"
+      "@ga/offer-document-in-tenant-space": [
+        "tenant-space/offer-document/src/index.ts"
       ],
       "@ga/offer-id-in-realtor-management": [
         "realtor-management/offer-id/src/index.ts"
@@ -65,14 +65,12 @@
       "@ga/offer-id-in-remote-offer-register": [
         "remote-offer-register/offer-id/src/index.ts"
       ],
-      "@ga/offer-id-in-tenant-management": [
-        "tenant-management/offer-id/src/index.ts"
-      ],
+      "@ga/offer-id-in-tenant-space": ["tenant-space/offer-id/src/index.ts"],
       "@ga/offer-in-realtor-management": [
         "realtor-management/offer/src/index.ts"
       ],
-      "@ga/offer-list-in-tenant-management": [
-        "tenant-management/observables/offer-list/src/index.ts"
+      "@ga/offer-list-in-tenant-space": [
+        "tenant-space/observables/offer-list/src/index.ts"
       ],
       "@ga/offer-list-observable-in-remote-offer-register": [
         "remote-offer-register/observables/offer-list/src/index.ts"
@@ -83,14 +81,14 @@
       "@ga/offer-repository-in-remote-offer-register": [
         "remote-offer-register/offer-repository/src/index.ts"
       ],
-      "@ga/offer-repository-in-tenant-management": [
-        "tenant-management/offer-repository/src/index.ts"
+      "@ga/offer-repository-in-tenant-space": [
+        "tenant-space/offer-repository/src/index.ts"
       ],
       "@ga/offer-struct-in-remote-offer-register": [
         "remote-offer-register/offer-struct/src/index.ts"
       ],
-      "@ga/offer-struct-in-tenant-management": [
-        "tenant-management/offer-struct/src/index.ts"
+      "@ga/offer-struct-in-tenant-space": [
+        "tenant-space/offer-struct/src/index.ts"
       ],
       "@ga/offet-list-observable-in-realtor-management": [
         "realtor-management/observables/offer-list/src/index.ts"
@@ -107,18 +105,18 @@
       "@ga/realtor-document-in-registry": [
         "realtor-registry/realtor-document/src/index.ts"
       ],
-      "@ga/realtor-document-in-tenant-management": [
-        "tenant-management/realtor-document/src/index.ts"
+      "@ga/realtor-document-in-tenant-space": [
+        "tenant-space/realtor-document/src/index.ts"
       ],
       "@ga/realtor-id-in-realtor-registry": [
         "realtor-registry/realtor-id/src/index.ts"
       ],
-      "@ga/realtor-id-in-tenant-management": [
-        "tenant-management/realtor-id/src/index.ts"
+      "@ga/realtor-id-in-tenant-space": [
+        "tenant-space/realtor-id/src/index.ts"
       ],
       "@ga/realtor-in-registry": ["realtor-registry/realtor/src/index.ts"],
-      "@ga/realtor-list-in-tenant-management": [
-        "tenant-management/observables/realtor-list/src/index.ts"
+      "@ga/realtor-list-in-tenant-space": [
+        "tenant-space/observables/realtor-list/src/index.ts"
       ],
       "@ga/realtor-list-observable-in-realtor-registry": [
         "realtor-registry/observables/realtor-list/src/index.ts"
@@ -126,20 +124,20 @@
       "@ga/realtor-repository-in-registry": [
         "realtor-registry/realtor-repository/src/index.ts"
       ],
-      "@ga/realtor-repository-in-tenant-management": [
-        "tenant-management/realtor-repository/src/index.ts"
+      "@ga/realtor-repository-in-tenant-space": [
+        "tenant-space/realtor-repository/src/index.ts"
       ],
       "@ga/realtor-service-id-in-realtor-registry": [
         "realtor-registry/realtor-service-id/src/index.ts"
       ],
-      "@ga/realtor-service-id-in-tenant-management": [
-        "tenant-management/realtor-service-id/src/index.ts"
+      "@ga/realtor-service-id-in-tenant-space": [
+        "tenant-space/realtor-service-id/src/index.ts"
       ],
       "@ga/realtor-struct-in-realtor-registry": [
         "realtor-registry/realtor-struct/src/index.ts"
       ],
-      "@ga/realtor-struct-in-tenant-management": [
-        "tenant-management/realtor-struct/src/index.ts"
+      "@ga/realtor-struct-in-tenant-space": [
+        "tenant-space/realtor-struct/src/index.ts"
       ],
       "@ga/register-realtor-api-in-registry": [
         "realtor-registry/register-realtor-api/src/index.ts"
@@ -159,14 +157,12 @@
       "@ga/service-in-remote-offer-register": [
         "remote-offer-register/service/src/index.ts"
       ],
-      "@ga/service-in-tenant-management": [
-        "tenant-management/service/src/index.ts"
+      "@ga/service-in-tenant-space": ["tenant-space/service/src/index.ts"],
+      "@ga/subscribe-to-realtor-register-api-in-tenant-space": [
+        "tenant-space/subscribe-to-realtor-register-api/src/index.ts"
       ],
-      "@ga/subscribe-to-realtor-register-api-in-tenant-management": [
-        "tenant-management/subscribe-to-realtor-register-api/src/index.ts"
-      ],
-      "@ga/update-realtor-api-in-tenant-management": [
-        "tenant-management/update-realtor-api/src/index.ts"
+      "@ga/update-realtor-api-in-tenant-space": [
+        "tenant-space/update-realtor-api/src/index.ts"
       ]
     }
   },
