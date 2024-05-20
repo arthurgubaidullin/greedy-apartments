@@ -21,5 +21,8 @@ export const get = () => {
     update: (document: RealtorDocument.RealtorDocument) => {
       db.set(document.id, document);
     },
+    getList: () => {
+      return Array.from(db.values());
+    },
   };
 };
