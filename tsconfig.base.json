@@ -162,7 +162,7 @@
         "tenant-space/subscribe-to-realtor-register-api/src/index.ts"
       ],
       "@ga/update-realtor-api-in-tenant-space": [
-        "tenant-space/update-realtor-api/src/index.ts"
+        "tenant-space/realtors/update-realtor-api/src/index.ts"
       ]
     }
   },

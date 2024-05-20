@@ -1,0 +1,19 @@
+{
+  "name": "update-realtor-api-in-tenant-space",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tenant-space/realtors/update-realtor-api/src",
+  "projectType": "library",
+  "tags": ["slice:tenant-space", "tier:api"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/tenant-space/realtors/update-realtor-api",
+        "main": "tenant-space/realtors/update-realtor-api/src/index.ts",
+        "tsConfig": "tenant-space/realtors/update-realtor-api/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}
