@@ -1,0 +1,19 @@
+{
+  "name": "realtor-document-in-tenant-space",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tenant-space/realtors/realtor-document/src",
+  "projectType": "library",
+  "tags": ["slice:tenant-space", "tier:use-case"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/tenant-space/realtors/realtor-document",
+        "main": "tenant-space/realtors/realtor-document/src/index.ts",
+        "tsConfig": "tenant-space/realtors/realtor-document/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}

@@ -106,7 +106,7 @@
         "realtor-registry/realtor-document/src/index.ts"
       ],
       "@ga/realtor-document-in-tenant-space": [
-        "tenant-space/realtor-document/src/index.ts"
+        "tenant-space/realtors/realtor-document/src/index.ts"
       ],
       "@ga/realtor-id-in-realtor-registry": [
         "realtor-registry/realtor-id/src/index.ts"
