@@ -90,7 +90,7 @@
         "remote-offer-register/offer-struct/src/index.ts"
       ],
       "@ga/offer-struct-in-tenant-space": [
-        "tenant-space/offer-struct/src/index.ts"
+        "tenant-space/offers/offer-struct/src/index.ts"
       ],
       "@ga/offet-list-observable-in-realtor-management": [
         "realtor-management/observables/offer-list/src/index.ts"
