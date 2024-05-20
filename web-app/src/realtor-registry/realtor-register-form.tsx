@@ -1,7 +1,7 @@
-import { registerRealtorApi } from '@ga/register-realtor-api-in-registry';
 import * as E from 'fp-ts/Either';
 import { pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';
+import * as P from '../program/program';
 
 export function RealtorRegisterForm() {
   return (
@@ -43,7 +43,7 @@ export function RealtorRegisterForm() {
                 )
               )
             ),
-            E.map(registerRealtorApi),
+            E.map(P.realtorRegistry.registerRealtor),
             E.fold(
               (e) => {
                 console.error(e);

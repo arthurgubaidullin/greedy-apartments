@@ -1,15 +1,10 @@
-import * as OfferService from '@ga/service-in-realtor-management';
-import * as RemoteOfferService from '@ga/service-in-remote-offer-register';
 import * as E from 'fp-ts/Either';
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import { flow, identity, pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';
 import { observer } from 'mobx-react-lite';
-
-const offerService = OfferService.get();
-
-const remoteOfferService = RemoteOfferService.get();
+import * as P from '../program/program';
 
 const ChangeRemoteOfferService = observer(() => {
   return (
@@ -33,7 +28,7 @@ const ChangeRemoteOfferService = observer(() => {
                 )
               )
             ),
-            E.map((a) => remoteOfferService.changeService(a.serviceId)),
+            E.map((a) => P.remoteOffers.changeService(a.serviceId)),
             E.fold((e) => {
               console.error(e);
             }, identity)
@@ -85,7 +80,7 @@ const NewOfferForm = observer(() => {
                 )
               )
             ),
-            E.map((a) => offerService.createOffer(a)),
+            E.map((a) => P.realtorManagement.createOffer(a)),
             E.fold((e) => {
               console.error(e);
             }, identity)
@@ -108,7 +103,7 @@ const NewOfferForm = observer(() => {
 
 const OfferList = observer(() => {
   return pipe(
-    offerService.offerList.get(),
+    P.realtorManagement.offerList.get(),
     O.fold(
       () => <p>No offers!</p>,
       flow(
@@ -119,7 +114,7 @@ const OfferList = observer(() => {
               onClick={(e) => {
                 e.preventDefault();
 
-                remoteOfferService.publishOffer(offer);
+                P.remoteOffers.publishOffer(offer);
               }}
             >
               Publish
@@ -141,7 +136,7 @@ const OfferList = observer(() => {
 
 const PublishedOfferList = observer(() => {
   return pipe(
-    remoteOfferService.offerList.get(),
+    P.remoteOffers.offerList.get(),
     O.fold(
       () => <p>No offers!</p>,
       flow(
