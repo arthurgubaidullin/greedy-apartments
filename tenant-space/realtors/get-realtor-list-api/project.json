@@ -1,0 +1,19 @@
+{
+  "name": "get-realtor-list-api-in-tenant-space",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tenant-space/realtors/get-realtor-list-api/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/tenant-space/realtors/get-realtor-list-api",
+        "main": "tenant-space/realtors/get-realtor-list-api/src/index.ts",
+        "tsConfig": "tenant-space/realtors/get-realtor-list-api/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}
