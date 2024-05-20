@@ -7,5 +7,6 @@ export default {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../coverage/tenant-space/observables/offer-list',
+  coverageDirectory:
+    '../../../coverage/tenant-space/offers/offer-list-observable',
 };
