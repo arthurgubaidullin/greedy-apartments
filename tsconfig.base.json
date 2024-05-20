@@ -137,7 +137,7 @@
         "realtor-registry/realtor-struct/src/index.ts"
       ],
       "@ga/realtor-struct-in-tenant-space": [
-        "tenant-space/realtor-struct/src/index.ts"
+        "tenant-space/realtors/realtor-struct/src/index.ts"
       ],
       "@ga/register-realtor-api-in-registry": [
         "realtor-registry/register-realtor-api/src/index.ts"
