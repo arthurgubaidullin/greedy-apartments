@@ -1,5 +1,5 @@
 {
-  "name": "@ga/service-in-tenant-space",
+  "name": "@ga/public-api-in-tenant-space",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",

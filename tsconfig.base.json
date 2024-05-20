@@ -98,6 +98,9 @@
       "@ga/offet-struct-in-realtor-management": [
         "realtor-management/offer-struct/src/index.ts"
       ],
+      "@ga/public-api-in-tenant-space": [
+        "tenant-space/public-api/src/index.ts"
+      ],
       "@ga/publish-offer-api-in-remote-offer-register": [
         "remote-offer-register/publish-offer-api/src/index.ts"
       ],
@@ -159,7 +162,6 @@
       "@ga/service-in-remote-offer-register": [
         "remote-offer-register/service/src/index.ts"
       ],
-      "@ga/service-in-tenant-space": ["tenant-space/service/src/index.ts"],
       "@ga/subscribe-to-realtor-register-api-in-tenant-space": [
         "tenant-space/realtors/subscribe-to-realtor-register-api/src/index.ts"
       ],
