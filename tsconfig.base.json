@@ -84,7 +84,7 @@
         "remote-offer-register/offer-repository/src/index.ts"
       ],
       "@ga/offer-repository-in-tenant-space": [
-        "tenant-space/offer-repository/src/index.ts"
+        "tenant-space/offers/offer-repository/src/index.ts"
       ],
       "@ga/offer-struct-in-remote-offer-register": [
         "remote-offer-register/offer-struct/src/index.ts"
