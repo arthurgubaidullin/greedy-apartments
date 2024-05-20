@@ -9,7 +9,7 @@ export const get = () => {
     create: (document: RealtorDocument.RealtorDocument): void => {
       const id = document.id;
 
-      if (db.has(id)) {
+      if (!db.has(id)) {
         db.set(id, document);
       }
     },
@@ -21,7 +21,7 @@ export const get = () => {
     update: (document: RealtorDocument.RealtorDocument) => {
       db.set(document.id, document);
     },
-    getList: () => {
+    getList: (): ReadonlyArray<RealtorDocument.RealtorDocument> => {
       return Array.from(db.values());
     },
   };
