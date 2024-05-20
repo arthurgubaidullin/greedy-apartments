@@ -131,7 +131,7 @@
         "realtor-registry/realtor-service-id/src/index.ts"
       ],
       "@ga/realtor-service-id-in-tenant-space": [
-        "tenant-space/realtor-service-id/src/index.ts"
+        "tenant-space/realtors/realtor-service-id/src/index.ts"
       ],
       "@ga/realtor-struct-in-realtor-registry": [
         "realtor-registry/realtor-struct/src/index.ts"
