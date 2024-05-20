@@ -12,7 +12,7 @@ export const get = (data: {
   const unsubscribe = subscribeToRealtorRegisterApi(data.realtorAdded);
 
   return {
-    realtorList: RealtorList.get(),
+    realtorList: RealtorList.get(data.realtorAdded),
     offerList: OfferList.get(),
     updateRealtor: updateRealtor,
     unsubscribe,
