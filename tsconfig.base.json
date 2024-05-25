@@ -17,6 +17,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ga/api-in-registry": ["registry/api/src/index.ts"],
       "@ga/change-service-api-in-remote-offer-register": [
         "remote-offer-register/change-service-api/src/index.ts"
       ],
@@ -154,7 +155,6 @@
         "remote-offer-register/service-id/src/index.ts"
       ],
       "@ga/service-in-realtor-space": ["realtor-space/service/src/index.ts"],
-      "@ga/service-in-registry": ["registry/service/src/index.ts"],
       "@ga/service-in-remote-offer-register": [
         "remote-offer-register/service/src/index.ts"
       ],
