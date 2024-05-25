@@ -2,7 +2,7 @@ import { createOfferApi } from '@ga/create-offer-api-in-realtor-space';
 import { CreateOffer as _CreateOffer } from '@ga/create-offer-in-realtor-space';
 import * as OfferList from '@ga/offet-list-observable-in-realtor-space';
 import * as OfferAdded from '@ga/offer-added-observable-in-realtor-space';
-import * as OfferStruct from '@ga/offet-struct-in-realtor-space';
+import * as OfferStruct from '@ga/offer-struct-in-realtor-space';
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import { IObservableValue } from 'mobx';

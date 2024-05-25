@@ -1,4 +1,4 @@
-import * as OfferStruct from '@ga/offet-struct-in-realtor-space';
+import * as OfferStruct from '@ga/offer-struct-in-realtor-space';
 import * as _Eq from 'fp-ts/Eq';
 import * as O from 'fp-ts/Option';
 import { IObservableValue, action, observable } from 'mobx';

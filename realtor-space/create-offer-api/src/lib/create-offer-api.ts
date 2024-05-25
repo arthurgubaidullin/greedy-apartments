@@ -1,6 +1,6 @@
 import { CreateOffer, createOffer } from '@ga/create-offer-in-realtor-space';
 import * as OfferRepository from '@ga/offer-repository-in-realtor-space';
-import * as OfferStruct from '@ga/offet-struct-in-realtor-space';
+import * as OfferStruct from '@ga/offer-struct-in-realtor-space';
 import * as OfferDocument from '@ga/offer-document-in-realtor-space';
 import { flow, identity, pipe } from 'fp-ts/function';
 import * as E from 'fp-ts/Either';
