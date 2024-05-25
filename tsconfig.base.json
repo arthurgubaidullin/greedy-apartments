@@ -119,7 +119,7 @@
       "@ga/realtor-id-in-tenant-space": [
         "tenant-space/realtors/realtor-id/src/index.ts"
       ],
-      "@ga/realtor-in-registry": ["registry/realtor/src/index.ts"],
+      "@ga/realtor-in-registry": ["registry/realtor/entity/src/index.ts"],
       "@ga/realtor-list-in-tenant-space": [
         "tenant-space/realtors/realtor-list-observable/src/index.ts"
       ],
