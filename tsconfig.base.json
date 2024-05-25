@@ -32,6 +32,9 @@
       "@ga/get-offer-list-api-in-remote-offer-register": [
         "remote-offer-register/get-offer-list-api/src/index.ts"
       ],
+      "@ga/get-offer-list-api-in-tenant-space": [
+        "tenant-space/offers/get-list-api/src/index.ts"
+      ],
       "@ga/get-offet-list-api-in-realtor-management": [
         "realtor-management/get-offer-list-api/src/index.ts"
       ],
