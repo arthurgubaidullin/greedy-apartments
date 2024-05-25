@@ -54,9 +54,9 @@
                 ]
               },
               {
-                "sourceTag": "slice:realtor-management",
+                "sourceTag": "slice:realtor-space",
                 "onlyDependOnLibsWithTags": [
-                  "slice:realtor-management",
+                  "slice:realtor-space",
                   "slice:apis"
                 ]
               },

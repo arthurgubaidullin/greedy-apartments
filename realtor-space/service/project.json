@@ -1,0 +1,19 @@
+{
+  "name": "service-in-realtor-space",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "realtor-space/service/src",
+  "projectType": "library",
+  "tags": ["slice:realtor-space", "slice:apis", "tier:api"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/realtor-space/service",
+        "main": "realtor-space/service/src/index.ts",
+        "tsConfig": "realtor-space/service/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}

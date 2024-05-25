@@ -1,4 +1,4 @@
-import RealtorManagement from '../realtor-management/realtor-management';
+import RealtorManagement from '../realtor-space/realtor-space';
 import RealtorRegistry from '../realtor-registry/realtor-registry';
 import TenantSpace from '../tenant-space/tenant-space';
 
@@ -16,7 +16,7 @@ export function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/realtor-management">Realtor Management</Link>
+            <Link to="/realtor-space">Realtor Management</Link>
           </li>
           <li>
             <Link to="/tenant-space">Tenant Management</Link>
@@ -27,7 +27,7 @@ export function App() {
         </ul>
       </div>
       <Routes>
-        <Route path="/realtor-management" element={<RealtorManagement />} />
+        <Route path="/realtor-space" element={<RealtorManagement />} />
         <Route path="/tenant-space" element={<TenantSpace />} />
         <Route path="/realtor-registry" element={<RealtorRegistry />} />
       </Routes>
