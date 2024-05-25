@@ -1,5 +1,5 @@
 import * as RealtorId from '@ga/realtor-id-in-registry';
-import * as RealtorServiceId from '@ga/realtor-service-id-in-registry';
+import * as RealtorServiceId from '@ga/service-id-in-registry';
 import * as fs from 'fast-check';
 import { pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';

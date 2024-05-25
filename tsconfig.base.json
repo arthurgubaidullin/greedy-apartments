@@ -133,9 +133,6 @@
       "@ga/realtor-repository-in-tenant-space": [
         "tenant-space/realtors/realtor-repository/src/index.ts"
       ],
-      "@ga/realtor-service-id-in-registry": [
-        "registry/realtor-service-id/src/index.ts"
-      ],
       "@ga/realtor-service-id-in-tenant-space": [
         "tenant-space/realtors/realtor-service-id/src/index.ts"
       ],
@@ -151,6 +148,7 @@
       "@ga/register-realtor-in-registry": [
         "registry/register-realtor/src/index.ts"
       ],
+      "@ga/service-id-in-registry": ["registry/service/id/src/index.ts"],
       "@ga/service-id-in-remote-offer-register": [
         "remote-offer-register/service-id/src/index.ts"
       ],
