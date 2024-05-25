@@ -8,7 +8,7 @@
     "io-ts-types": "^0.5.19",
     "newtype-ts": "^0.3.5",
     "@ga/realtor-id-in-registry": "0.0.1",
-    "@ga/realtor-service-id-in-registry": "0.0.1"
+    "@ga/service-id-in-registry": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",

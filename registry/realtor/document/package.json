@@ -6,7 +6,7 @@
     "io-ts": "^2.2.21",
     "fp-ts": "^2.16.5",
     "@ga/realtor-id-in-registry": "0.0.1",
-    "@ga/realtor-service-id-in-registry": "0.0.1"
+    "@ga/service-id-in-registry": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
