@@ -3,13 +3,13 @@
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
-    "@ga/offet-struct-in-realtor-space": "0.0.1",
     "mobx": "^6.12.3",
     "fp-ts": "^2.16.5",
     "@ga/offet-list-observable-in-realtor-space": "0.0.1",
     "@ga/create-offer-in-realtor-space": "0.0.1",
     "@ga/create-offer-api-in-realtor-space": "0.0.1",
-    "@ga/offer-added-observable-in-realtor-space": "0.0.1"
+    "@ga/offer-added-observable-in-realtor-space": "0.0.1",
+    "@ga/offer-struct-in-realtor-space": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",

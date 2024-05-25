@@ -6,8 +6,8 @@
     "@ga/create-offer-in-realtor-space": "0.0.1",
     "@ga/offer-repository-in-realtor-space": "0.0.1",
     "fp-ts": "^2.16.5",
-    "@ga/offet-struct-in-realtor-space": "0.0.1",
-    "@ga/offer-document-in-realtor-space": "0.0.1"
+    "@ga/offer-document-in-realtor-space": "0.0.1",
+    "@ga/offer-struct-in-realtor-space": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
