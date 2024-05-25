@@ -4,6 +4,4 @@ import * as ServiceId from '@ga/service-id-in-remote-offer-register';
 
 export const getOfferListApi = (
   id: ServiceId.ServiceId
-): ReadonlyArray<OfferDocument.OfferDocument> => {
-  return Repository.get(id).getAll();
-};
+): ReadonlyArray<OfferDocument.OfferDocument> => Repository.get(id).getAll();

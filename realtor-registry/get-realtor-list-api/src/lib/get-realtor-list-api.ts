@@ -5,9 +5,7 @@ import { pipe } from 'fp-ts/function';
 import * as RA from 'fp-ts/ReadonlyArray';
 
 export const getRealtorListApi =
-  (): ReadonlyArray<RealtorStruct.RealtorStruct> => {
-    return pipe(
+  (): ReadonlyArray<RealtorStruct.RealtorStruct> => pipe(
       RealtorRepository.getRealtorRepository().getAll(),
       RA.map(RealtorDocument.toJSON)
     );
-  };

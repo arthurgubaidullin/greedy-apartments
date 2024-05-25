@@ -15,8 +15,7 @@ export const publishOfferApi =
   (publish: (data: OfferDocument.OfferDocument) => void) =>
   (
     data: OfferDocument.OfferDocumentSimplifed
-  ): O.Option<OfferDocument.OfferDocument> => {
-    return pipe(
+  ): O.Option<OfferDocument.OfferDocument> => pipe(
       currentService.get(),
       O.chain((id) =>
         pipe(
@@ -36,4 +35,3 @@ export const publishOfferApi =
         )
       )
     );
-  };

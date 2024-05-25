@@ -10,12 +10,10 @@ import { pipe } from 'fp-ts/function';
 
 const repository = RealtorRepository.getRealtorRepository();
 
-export const registerRealtorApi = (data: RegisterRealtor): void => {
-  return pipe(
+export const registerRealtorApi = (data: RegisterRealtor): void => pipe(
     data,
     registerRealtor,
     I.chainFirst(repository.create),
     I.map(RealtorDocument.toJSON),
     RealtorAdded.publish
   );
-};

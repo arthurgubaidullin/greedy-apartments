@@ -6,11 +6,9 @@ export type RegisterRealtor = RealtorDocument.RealtorDocumentSimplified;
 
 export const registerRealtor = (
   data: RegisterRealtor
-): RealtorDocument.RealtorDocument => {
-  return pipe(
+): RealtorDocument.RealtorDocument => pipe(
     data,
     RealtorDocument.fromSimplified,
     Realtor.create,
     Realtor.toJSON
   );
-};

@@ -4,8 +4,7 @@ import * as O from 'fp-ts/Option';
 
 const db = new Map<RealtorId.RealtorId, RealtorDocument.RealtorDocument>();
 
-export const get = () => {
-  return {
+export const get = () => ({
     create: (document: RealtorDocument.RealtorDocument): void => {
       const id = document.id;
 
@@ -15,14 +14,9 @@ export const get = () => {
     },
     get: (
       id: RealtorId.RealtorId
-    ): O.Option<RealtorDocument.RealtorDocument> => {
-      return O.fromNullable(db.get(id));
-    },
+    ): O.Option<RealtorDocument.RealtorDocument> => O.fromNullable(db.get(id)),
     update: (document: RealtorDocument.RealtorDocument) => {
       db.set(document.id, document);
     },
-    getList: (): ReadonlyArray<RealtorDocument.RealtorDocument> => {
-      return Array.from(db.values());
-    },
-  };
-};
+    getList: (): ReadonlyArray<RealtorDocument.RealtorDocument> => Array.from(db.values()),
+  });

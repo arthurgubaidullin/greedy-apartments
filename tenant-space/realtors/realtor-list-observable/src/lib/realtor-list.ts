@@ -34,11 +34,9 @@ export const get = (
 > => {
   const realtorList = create();
 
-  const update = action(() => {
-    return pipe(getRealtorListApi(), O.fromPredicate(RA.isNonEmpty), (value) =>
+  const update = action(() => pipe(getRealtorListApi(), O.fromPredicate(RA.isNonEmpty), (value) =>
       realtorList.set(value)
-    );
-  });
+    ));
 
   let unsubscribe = constVoid;
 

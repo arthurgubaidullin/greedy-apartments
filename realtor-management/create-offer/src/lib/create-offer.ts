@@ -7,11 +7,9 @@ export type CreateOffer = OfferDocument.SimplifiedOfferDocument;
 
 export const createOffer = (
   data: CreateOffer
-): E.Either<string[], OfferDocument.OfferDocument> => {
-  return pipe(
+): E.Either<string[], OfferDocument.OfferDocument> => pipe(
     data,
     OfferDocument.parse,
     E.map(Offer.create),
     E.map(Offer.toJSON)
   );
-};

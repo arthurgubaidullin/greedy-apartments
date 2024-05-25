@@ -10,8 +10,7 @@ import * as E from 'fp-ts/Either';
 
 export const createOfferApi =
   (publish: (data: OfferStruct.OfferStruct) => void) =>
-  (data: CreateOffer): void => {
-    return pipe(
+  (data: CreateOffer): void => pipe(
       createOffer(data),
       E.chainFirstW(flow(OfferRepository.get().create, E.right)),
       E.map((a) => OfferDocument.codec.encode(a)),
@@ -20,4 +19,3 @@ export const createOfferApi =
         console.error('Failed to create an offer.', { errors });
       }, identity)
     );
-  };

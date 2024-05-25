@@ -50,8 +50,7 @@ export const OfferList = observer(() => {
   );
 });
 
-export const TenantSpace = observer(() => {
-  return (
+export const TenantSpace = observer(() => (
     <div>
       <h1>Tenant Management</h1>
 
@@ -59,7 +58,6 @@ export const TenantSpace = observer(() => {
 
       <OfferList />
     </div>
-  );
-});
+  ));
 
 export default TenantSpace;

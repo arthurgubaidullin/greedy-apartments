@@ -9,10 +9,8 @@ interface ChangeService {
 
 export const changeServiceApi =
   (currentService: ChangeService) =>
-  (serviceId: NonEmptyString): void => {
-    return pipe(
+  (serviceId: NonEmptyString): void => pipe(
       ServiceId.fromNonEmptyString(serviceId),
       O.some,
       currentService.change
     );
-  };

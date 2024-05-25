@@ -29,8 +29,6 @@ export const get = (id: ServiceId.ServiceId) => {
         db.set(document.id, document);
       }
     },
-    getAll: (): ReadonlyArray<OfferDocument.OfferDocument> => {
-      return Array.from(db.values());
-    },
+    getAll: (): ReadonlyArray<OfferDocument.OfferDocument> => Array.from(db.values()),
   };
 };

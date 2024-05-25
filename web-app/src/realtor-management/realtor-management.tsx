@@ -6,8 +6,7 @@ import { NonEmptyString } from 'io-ts-types';
 import { observer } from 'mobx-react-lite';
 import * as P from '../program/program';
 
-const ChangeRemoteOfferService = observer(() => {
-  return (
+const ChangeRemoteOfferService = observer(() => (
     <div>
       <h2>Change remote offer service</h2>
 
@@ -46,11 +45,9 @@ const ChangeRemoteOfferService = observer(() => {
         <input type="submit" />
       </form>
     </div>
-  );
-});
+  ));
 
-const NewOfferForm = observer(() => {
-  return (
+const NewOfferForm = observer(() => (
     <div>
       <h2>New Offer form</h2>
 
@@ -98,11 +95,9 @@ const NewOfferForm = observer(() => {
         <input type="submit" />
       </form>
     </div>
-  );
-});
+  ));
 
-const OfferList = observer(() => {
-  return pipe(
+const OfferList = observer(() => pipe(
     P.realtorManagement.offerList.get(),
     O.fold(
       () => <p>No offers!</p>,
@@ -131,11 +126,9 @@ const OfferList = observer(() => {
         {list}
       </div>
     )
-  );
-});
+  ));
 
-const PublishedOfferList = observer(() => {
-  return pipe(
+const PublishedOfferList = observer(() => pipe(
     P.remoteOffers.offerList.get(),
     O.fold(
       () => <p>No offers!</p>,
@@ -151,11 +144,9 @@ const PublishedOfferList = observer(() => {
         {list}
       </div>
     )
-  );
-});
+  ));
 
-export const RealtorManagement = observer(() => {
-  return (
+export const RealtorManagement = observer(() => (
     <div>
       <h1>Realtor Management</h1>
 
@@ -167,7 +158,6 @@ export const RealtorManagement = observer(() => {
 
       <PublishedOfferList />
     </div>
-  );
-});
+  ));
 
 export default RealtorManagement;
