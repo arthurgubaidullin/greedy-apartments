@@ -13,3 +13,11 @@ export type OfferDocument = t.TypeOf<typeof OfferDocument>;
 export const toJSON = (
   document: OfferDocument
 ): t.OutputOf<typeof OfferDocument> => OfferDocument.encode(document);
+
+export const fromSimplified = (
+  data: t.OutputOf<typeof OfferDocument>
+): OfferDocument => ({
+  id: OfferId.fromNonEmptyString(data.id),
+  realtorId: RealtorId.fromNonEmptyString(data.id),
+  name: data.name,
+});
