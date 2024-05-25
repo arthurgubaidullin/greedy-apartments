@@ -110,7 +110,7 @@
         "registry/observables/realtor-added/src/index.ts"
       ],
       "@ga/realtor-document-in-registry": [
-        "registry/realtor-document/src/index.ts"
+        "registry/realtor/document/src/index.ts"
       ],
       "@ga/realtor-document-in-tenant-space": [
         "tenant-space/realtors/realtor-document/src/index.ts"
