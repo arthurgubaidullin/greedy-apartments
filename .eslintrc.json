@@ -47,11 +47,8 @@
                 "onlyDependOnLibsWithTags": ["tier:app", "tier:api", "tier:lib"]
               },
               {
-                "sourceTag": "slice:realtor-registry",
-                "onlyDependOnLibsWithTags": [
-                  "slice:realtor-registry",
-                  "slice:apis"
-                ]
+                "sourceTag": "slice:registry",
+                "onlyDependOnLibsWithTags": ["slice:registry", "slice:apis"]
               },
               {
                 "sourceTag": "slice:realtor-space",

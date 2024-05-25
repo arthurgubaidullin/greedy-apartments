@@ -1,7 +1,7 @@
 import * as RealtorManagementService from '@ga/service-in-realtor-space';
 import * as RemoteOfferService from '@ga/service-in-remote-offer-register';
 import * as TenantSpaceService from '@ga/public-api-in-tenant-space';
-import * as RealtorRegistry from '@ga/service-in-realtor-registry';
+import * as RealtorRegistry from '@ga/service-in-registry';
 
 export const realtorManagement = RealtorManagementService.get();
 

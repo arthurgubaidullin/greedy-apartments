@@ -1,5 +1,5 @@
 import RealtorManagement from '../realtor-space/realtor-space';
-import RealtorRegistry from '../realtor-registry/realtor-registry';
+import RealtorRegistry from '../registry/registry';
 import TenantSpace from '../tenant-space/tenant-space';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -22,14 +22,14 @@ export function App() {
             <Link to="/tenant-space">Tenant Management</Link>
           </li>
           <li>
-            <Link to="/realtor-registry">Realtor Registry</Link>
+            <Link to="/registry">Realtor Registry</Link>
           </li>
         </ul>
       </div>
       <Routes>
         <Route path="/realtor-space" element={<RealtorManagement />} />
         <Route path="/tenant-space" element={<TenantSpace />} />
-        <Route path="/realtor-registry" element={<RealtorRegistry />} />
+        <Route path="/registry" element={<RealtorRegistry />} />
       </Routes>
     </div>
   );

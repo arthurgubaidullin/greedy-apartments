@@ -1,0 +1,19 @@
+{
+  "name": "realtor-list-observable-in-registry",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "registry/observables/realtor-list/src",
+  "projectType": "library",
+  "tags": ["slice:registry", "tier:api"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/registry/observables/realtor-list",
+        "main": "registry/observables/realtor-list/src/index.ts",
+        "tsConfig": "registry/observables/realtor-list/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}

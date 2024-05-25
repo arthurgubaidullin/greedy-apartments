@@ -1,0 +1,19 @@
+{
+  "name": "service-in-registry",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "registry/service/src",
+  "projectType": "library",
+  "tags": ["slice:registry", "slice:apis", "tier:api"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/registry/service",
+        "main": "registry/service/src/index.ts",
+        "tsConfig": "registry/service/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}
