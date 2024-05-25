@@ -17,6 +17,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ga/api-in-realtor-space": ["realtor-space/api/src/index.ts"],
       "@ga/api-in-registry": ["registry/api/src/index.ts"],
       "@ga/change-service-api-in-remote-offer-register": [
         "remote-offer-register/change-service-api/src/index.ts"
@@ -30,14 +31,14 @@
       "@ga/current-service-observable-in-remote-offer-register": [
         "remote-offer-register/observables/current-service/src/index.ts"
       ],
+      "@ga/get-offer-list-api-in-realtor-space": [
+        "realtor-space/get-offer-list-api/src/index.ts"
+      ],
       "@ga/get-offer-list-api-in-remote-offer-register": [
         "remote-offer-register/get-offer-list-api/src/index.ts"
       ],
       "@ga/get-offer-list-api-in-tenant-space": [
         "tenant-space/offers/get-list-api/src/index.ts"
-      ],
-      "@ga/get-offer-list-api-in-realtor-space": [
-        "realtor-space/get-offer-list-api/src/index.ts"
       ],
       "@ga/get-realtor-api-in-registry": [
         "registry/get-realtor-api/src/index.ts"
@@ -152,7 +153,6 @@
       "@ga/service-id-in-remote-offer-register": [
         "remote-offer-register/service-id/src/index.ts"
       ],
-      "@ga/service-in-realtor-space": ["realtor-space/service/src/index.ts"],
       "@ga/service-in-remote-offer-register": [
         "remote-offer-register/service/src/index.ts"
       ],
