@@ -9,3 +9,7 @@ const OfferDocument = t.strict({
 });
 
 export type OfferDocument = t.TypeOf<typeof OfferDocument>;
+
+export const toJSON = (
+  document: OfferDocument
+): t.OutputOf<typeof OfferDocument> => OfferDocument.encode(document);
