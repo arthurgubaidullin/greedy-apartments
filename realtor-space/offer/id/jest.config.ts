@@ -1,11 +1,11 @@
 /* eslint-disable */
 export default {
   displayName: 'offer-id-in-realtor-space',
-  preset: '../../jest.preset.js',
+  preset: '../../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/realtor-space/offer-id',
+  coverageDirectory: '../../../coverage/realtor-space/offer/id',
 };
