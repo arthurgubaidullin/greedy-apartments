@@ -1,5 +1,5 @@
 {
-  "name": "@ga/get-offet-list-api-in-realtor-space",
+  "name": "@ga/get-offer-list-api-in-realtor-space",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",

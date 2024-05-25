@@ -1,4 +1,4 @@
-import { getOffetListApi } from '@ga/get-offet-list-api-in-realtor-space';
+import { getOffetListApi } from '@ga/get-offer-list-api-in-realtor-space';
 import * as OfferStruct from '@ga/offer-struct-in-realtor-space';
 import * as _Eq from 'fp-ts/Eq';
 import * as O from 'fp-ts/Option';

@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'get-offet-list-api-in-realtor-space',
+  displayName: 'get-offer-list-api-in-realtor-space',
   preset: '../../jest.preset.js',
   testEnvironment: 'node',
   transform: {

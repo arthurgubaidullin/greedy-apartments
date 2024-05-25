@@ -36,7 +36,7 @@
       "@ga/get-offer-list-api-in-tenant-space": [
         "tenant-space/offers/get-list-api/src/index.ts"
       ],
-      "@ga/get-offet-list-api-in-realtor-space": [
+      "@ga/get-offer-list-api-in-realtor-space": [
         "realtor-space/get-offer-list-api/src/index.ts"
       ],
       "@ga/get-realtor-api-in-registry": [

@@ -1,5 +1,5 @@
 {
-  "name": "get-offet-list-api-in-realtor-space",
+  "name": "get-offer-list-api-in-realtor-space",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "realtor-space/get-offer-list-api/src",
   "projectType": "library",
