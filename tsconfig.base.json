@@ -58,7 +58,7 @@
         "realtor-space/observables/offer-changes/src/index.ts"
       ],
       "@ga/offer-document-in-realtor-space": [
-        "realtor-space/offer-document/src/index.ts"
+        "realtor-space/offer/document/src/index.ts"
       ],
       "@ga/offer-document-in-remote-offer-register": [
         "remote-offer-register/offer-document/src/index.ts"
