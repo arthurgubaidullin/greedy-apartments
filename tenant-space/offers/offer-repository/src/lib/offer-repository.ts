@@ -16,6 +16,9 @@ export const get = () => {
     get: (id: OfferId.OfferId): O.Option<OfferDocument> => {
       return O.fromNullable(db.get(id));
     },
+    getList: (): ReadonlyArray<OfferDocument> => {
+      return Array.from(db.values());
+    },
     update: (document: OfferDocument) => {
       db.set(document.id, document);
     },
