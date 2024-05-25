@@ -168,6 +168,9 @@
       "@ga/subscribe-to-realtor-register-api-in-tenant-space": [
         "tenant-space/realtors/subscribe-to-realtor-register-api/src/index.ts"
       ],
+      "@ga/update-offer-api-in-tenant-space": [
+        "tenant-space/offers/update-api/src/index.ts"
+      ],
       "@ga/update-realtor-api-in-tenant-space": [
         "tenant-space/realtors/update-realtor-api/src/index.ts"
       ]
