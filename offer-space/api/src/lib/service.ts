@@ -42,7 +42,7 @@ export const get = (): Service => {
     offerAdded.publish
   );
 
-  const _offerList = OfferList.getOfferList(offersApi.getOfferListApi)(
+  const _offerList = OfferList.getOfferList(offersApi.getOfferList)(
     currentService
   )(offerAdded);
 

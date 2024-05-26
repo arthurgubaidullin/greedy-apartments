@@ -1,8 +1,8 @@
-import { getOfferListApi } from './get-offer-list-api';
-import { publishOfferApi } from './publish-offer-api';
+import { getOfferListApi } from './get-offer-list';
+import { publishOfferApi } from './publish-offer';
 
 export const get = () =>
   ({
     publishOffer: publishOfferApi,
-    getOfferListApi: getOfferListApi,
+    getOfferList: getOfferListApi,
   } as const);
