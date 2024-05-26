@@ -9,7 +9,8 @@
     "@ga/realtor-struct-in-tenant-space": "0.0.1",
     "fp-ts": "^2.16.5",
     "mobx": "^6.12.3",
-    "@ga/subscribe-to-realtor-register-api-in-tenant-space": "0.0.1"
+    "@ga/subscribe-to-realtor-register-api-in-tenant-space": "0.0.1",
+    "@ga/api-in-offer-space": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",

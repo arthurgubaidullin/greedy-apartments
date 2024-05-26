@@ -6,7 +6,8 @@
     "fp-ts": "^2.16.5",
     "mobx": "^6.12.3",
     "@ga/realtor-struct-in-tenant-space": "0.0.1",
-    "@ga/get-realtor-list-api-in-tenant-space": "0.0.1"
+    "@ga/get-realtor-list-api-in-tenant-space": "0.0.1",
+    "@ga/readonly-observable": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",

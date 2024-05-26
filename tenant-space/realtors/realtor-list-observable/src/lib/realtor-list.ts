@@ -13,6 +13,7 @@ import {
   onBecomeObserved,
   onBecomeUnobserved,
 } from 'mobx';
+import { ReadonlyObservable } from '@ga/readonly-observable';
 
 const create = () =>
   observable.box<
@@ -22,10 +23,7 @@ const create = () =>
   } satisfies _Eq.Eq<O.Option<RNEA.ReadonlyNonEmptyArray<RealtorStruct.RealtorStruct>>>);
 
 export const get = (
-  realtorAdded: Pick<
-    IObservableValue<O.Option<RealtorStruct.RealtorStruct>>,
-    'get'
-  >
+  realtorAdded: ReadonlyObservable<O.Option<RealtorStruct.RealtorStruct>>
 ): Pick<
   IObservableValue<
     O.Option<RNEA.ReadonlyNonEmptyArray<RealtorStruct.RealtorStruct>>
@@ -34,9 +32,11 @@ export const get = (
 > => {
   const realtorList = create();
 
-  const update = action(() => pipe(getRealtorListApi(), O.fromPredicate(RA.isNonEmpty), (value) =>
+  const update = action(() =>
+    pipe(getRealtorListApi(), O.fromPredicate(RA.isNonEmpty), (value) =>
       realtorList.set(value)
-    ));
+    )
+  );
 
   let unsubscribe = constVoid;
 
