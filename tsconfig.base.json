@@ -154,6 +154,9 @@
         "offer-space/services/service/id/src/index.ts"
       ],
       "@ga/service-id-in-registry": ["registry/service/id/src/index.ts"],
+      "@ga/service-updated-store-in-offer-space": [
+        "offer-space/services/stores/service-updated/src/index.ts"
+      ],
       "@ga/subscribe-to-realtor-register-api-in-tenant-space": [
         "tenant-space/realtors/subscribe-to-realtor-register-api/src/index.ts"
       ],
