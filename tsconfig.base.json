@@ -102,7 +102,7 @@
         "realtor-space/offers/api/src/index.ts"
       ],
       "@ga/offers-repository-in-memory-in-offer-space": [
-        "offer-space/offers/repository/in-memory/src/index.ts"
+        "offer-space/offers/repositories/in-memory/src/index.ts"
       ],
       "@ga/offers-repository-in-realtor-space": [
         "realtor-space/offers/repository/in-memory/src/index.ts"

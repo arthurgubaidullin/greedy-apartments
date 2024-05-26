@@ -8,5 +8,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory:
-    '../../../../coverage/offer-space/offers/repository/in-memory',
+    '../../../../coverage/offer-space/offers/repositories/in-memory',
 };
