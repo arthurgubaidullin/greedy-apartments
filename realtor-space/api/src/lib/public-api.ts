@@ -1,14 +1,18 @@
 import * as CurrentServiceApi from '@ga/current-service-api-in-realtor-space';
 import * as OfferStruct from '@ga/offer-struct-in-realtor-space';
+import * as OffersApi from '@ga/offers-api-in-realtor-space';
 import { ReadonlyObservable } from '@ga/readonly-observable';
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import { pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';
 import { computed } from 'mobx';
-import { CreateOffer } from './create-offer';
-import * as PrivateApi from './private-api';
 import * as PublishedOffersService from './published-offers-service';
+import { CreateOffer as _CreateOffer } from '@ga/create-offer-in-realtor-space';
+
+export interface CreateOffer {
+  readonly createOffer: (data: _CreateOffer) => void;
+}
 
 interface RemoteOfferListObservable {
   readonly publishedOfferList: ReadonlyObservable<
@@ -41,7 +45,7 @@ type PublicApi = CreateOffer &
   ConnectToService;
 
 export const get = () => {
-  const privateApi = PrivateApi.get();
+  const privateApi = OffersApi.get();
 
   const currentServiceIdApi = CurrentServiceApi.get();
 
