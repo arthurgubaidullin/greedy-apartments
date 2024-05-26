@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
-    "@ga/offer-list-in-tenant-space": "0.0.1",
     "@ga/update-realtor-api-in-tenant-space": "0.0.1",
     "@ga/realtor-list-in-tenant-space": "0.0.1",
     "@ga/realtor-struct-in-tenant-space": "0.0.1",
