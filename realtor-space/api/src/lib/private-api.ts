@@ -1,7 +1,7 @@
 import * as OffersApi from '@ga/offers-api-in-realtor-space';
 import * as OfferAdded from '@ga/offer-added-observable-in-realtor-space';
 import * as OfferStruct from '@ga/offer-struct-in-realtor-space';
-import * as OfferList from '@ga/offet-list-observable-in-realtor-space';
+import * as OfferList from '@ga/offer-list-store-in-realtor-space';
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import { ReadonlyObservable } from '@ga/readonly-observable';

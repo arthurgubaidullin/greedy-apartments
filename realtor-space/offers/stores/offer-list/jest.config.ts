@@ -1,11 +1,12 @@
 /* eslint-disable */
 export default {
-  displayName: 'offet-list-observable-in-realtor-space',
-  preset: '../../../jest.preset.js',
+  displayName: 'offer-list-store-in-realtor-space',
+  preset: '../../../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../coverage/realtor-space/observables/offer-list',
+  coverageDirectory:
+    '../../../../coverage/realtor-space/offers/stores/offer-list',
 };
