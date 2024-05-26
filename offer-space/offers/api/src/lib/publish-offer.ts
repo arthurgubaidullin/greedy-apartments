@@ -6,9 +6,13 @@ import * as I from 'fp-ts/Identity';
 import * as O from 'fp-ts/Option';
 import { pipe } from 'fp-ts/function';
 
+interface PublishOffer {
+  readonly publish: (data: OfferDocument.OfferDocument) => void;
+}
+
 export const publishOfferApi =
+  (P: PublishOffer) =>
   (id: ServiceId.ServiceId) =>
-  (publish: (data: OfferDocument.OfferDocument) => void) =>
   (
     data: OfferDocument.OfferDocumentSimplifed
   ): O.Option<OfferDocument.OfferDocument> =>
@@ -19,7 +23,7 @@ export const publishOfferApi =
         pipe(
           document,
           I.chainFirst(Repository.get(id).create),
-          I.chainFirst(publish)
+          I.chainFirst(P.publish)
         )
       ),
       E.fold((e) => {

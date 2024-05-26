@@ -28,7 +28,7 @@ type Service = PublishOffer & OfferListObservable;
 export const get = (serviceId: ServiceId): Service => {
   const offerAdded = OfferAdded.get();
 
-  const _publishOffer = publishOffer(serviceId)(offerAdded.publish);
+  const _publishOffer = publishOffer(offerAdded)(serviceId);
 
   const _offerList = OfferList.get(getOfferList)(serviceId)(offerAdded);
 
