@@ -1,4 +1,5 @@
 import * as OfferStruct from '@ga/offer-struct-in-realtor-space';
+import { ReadonlyObservable } from '@ga/readonly-observable';
 import * as _Eq from 'fp-ts/Eq';
 import * as O from 'fp-ts/Option';
 import * as RA from 'fp-ts/ReadonlyArray';
@@ -29,10 +30,10 @@ const update =
     );
 
 export const get =
-  (getOfferList: () => readonly OfferStruct.OfferStruct[]) =>
+  (getOfferList: () => ReadonlyArray<OfferStruct.OfferStruct>) =>
   (
-    offerAdded: Pick<IObservableValue<O.Option<OfferStruct.OfferStruct>>, 'get'>
-  ): Pick<IObservableValue<T>, 'get'> => {
+    offerAdded: ReadonlyObservable<O.Option<OfferStruct.OfferStruct>>
+  ): ReadonlyObservable<T> => {
     const offerList = getOfferListStore();
 
     const _update = update(getOfferList)(offerList);
