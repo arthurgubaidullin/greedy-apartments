@@ -22,9 +22,6 @@
       "@ga/change-service-api-in-offer-space": [
         "offer-space/change-service-api/src/index.ts"
       ],
-      "@ga/create-offer-api-in-realtor-space": [
-        "realtor-space/create-offer-api/src/index.ts"
-      ],
       "@ga/create-offer-in-realtor-space": [
         "realtor-space/offers/create-offer/src/index.ts"
       ],
@@ -39,9 +36,6 @@
       ],
       "@ga/get-offer-list-api-in-offer-space": [
         "offer-space/get-offer-list-api/src/index.ts"
-      ],
-      "@ga/get-offer-list-api-in-realtor-space": [
-        "realtor-space/get-offer-list-api/src/index.ts"
       ],
       "@ga/get-offer-list-api-in-tenant-space": [
         "tenant-space/offers/get-list-api/src/index.ts"

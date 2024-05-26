@@ -5,8 +5,10 @@ import * as OfferDocument from '@ga/offer-document-in-realtor-space';
 import { flow, identity, pipe } from 'fp-ts/function';
 import * as E from 'fp-ts/Either';
 
+export type PublishOffer = (data: OfferStruct.OfferStruct) => void;
+
 export const createOfferApi =
-  (publish: (data: OfferStruct.OfferStruct) => void) =>
+  (publish: PublishOffer) =>
   (data: CreateOffer): void =>
     pipe(
       createOffer(data),
