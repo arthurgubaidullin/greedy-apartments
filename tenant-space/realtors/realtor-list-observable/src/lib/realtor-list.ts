@@ -1,4 +1,5 @@
 import { getRealtorListApi } from '@ga/get-realtor-list-api-in-tenant-space';
+import { ReadonlyObservable } from '@ga/readonly-observable';
 import * as RealtorStruct from '@ga/realtor-struct-in-tenant-space';
 import * as _Eq from 'fp-ts/Eq';
 import * as O from 'fp-ts/Option';
@@ -6,14 +7,12 @@ import * as RA from 'fp-ts/ReadonlyArray';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import { constVoid, pipe } from 'fp-ts/function';
 import {
-  IObservableValue,
   action,
   autorun,
   observable,
   onBecomeObserved,
   onBecomeUnobserved,
 } from 'mobx';
-import { ReadonlyObservable } from '@ga/readonly-observable';
 
 const create = () =>
   observable.box<
@@ -24,11 +23,8 @@ const create = () =>
 
 export const get = (
   realtorAdded: ReadonlyObservable<O.Option<RealtorStruct.RealtorStruct>>
-): Pick<
-  IObservableValue<
-    O.Option<RNEA.ReadonlyNonEmptyArray<RealtorStruct.RealtorStruct>>
-  >,
-  'get'
+): ReadonlyObservable<
+  O.Option<RNEA.ReadonlyNonEmptyArray<RealtorStruct.RealtorStruct>>
 > => {
   const realtorList = create();
 
