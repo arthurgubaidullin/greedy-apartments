@@ -47,8 +47,8 @@
       "@ga/get-realtor-list-api-in-tenant-space": [
         "tenant-space/realtors/get-realtor-list-api/src/index.ts"
       ],
-      "@ga/offer-added-observable-in-offer-space": [
-        "offer-space/observables/offer-added/src/index.ts"
+      "@ga/offer-added-store-in-offer-space": [
+        "offer-space/offers/stores/offer-added/src/index.ts"
       ],
       "@ga/offer-added-store-in-realtor-space": [
         "realtor-space/offers/stores/offer-added/src/index.ts"
