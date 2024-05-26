@@ -4,9 +4,9 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "@ga/offer-document-in-realtor-space": "0.0.1",
-    "@ga/offer-repository-in-realtor-space": "0.0.1",
     "fp-ts": "^2.16.5",
-    "@ga/offer-struct-in-realtor-space": "0.0.1"
+    "@ga/offer-struct-in-realtor-space": "0.0.1",
+    "@ga/offers-repository-in-realtor-space": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",

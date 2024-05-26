@@ -1,5 +1,5 @@
 {
-  "name": "@ga/offer-repository-in-realtor-space",
+  "name": "@ga/offers-repository-in-realtor-space",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
