@@ -6,7 +6,12 @@
     "@ga/offer-document-in-offer-space": "0.0.1",
     "@ga/offers-repository-in-memory-in-offer-space": "0.0.1",
     "@ga/service-id-in-offer-space": "0.0.1",
-    "fp-ts": "^2.16.5"
+    "fp-ts": "^2.16.5",
+    "@ga/offer-added-store-in-offer-space": "0.0.1",
+    "@ga/offer-list-store-in-offer-space": "0.0.1",
+    "@ga/offer-struct-in-offer-space": "0.0.1",
+    "@ga/readonly-observable": "0.0.1",
+    "mobx": "^6.12.3"
   },
   "type": "commonjs",
   "main": "./src/index.js",
