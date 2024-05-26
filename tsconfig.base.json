@@ -93,7 +93,7 @@
         "tenant-space/offers/offer-repository/src/index.ts"
       ],
       "@ga/offer-struct-in-offer-space": [
-        "offer-space/offer-struct/src/index.ts"
+        "offer-space/offers/offer/struct/src/index.ts"
       ],
       "@ga/offer-struct-in-realtor-space": [
         "realtor-space/offers/offer/struct/src/index.ts"

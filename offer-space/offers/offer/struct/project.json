@@ -1,0 +1,19 @@
+{
+  "name": "offer-struct-in-offer-space",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "offer-space/offers/offer/struct/src",
+  "projectType": "library",
+  "tags": ["slice:offer-space", "tier:use-case"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/offer-space/offers/offer/struct",
+        "main": "offer-space/offers/offer/struct/src/index.ts",
+        "tsConfig": "offer-space/offers/offer/struct/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}
