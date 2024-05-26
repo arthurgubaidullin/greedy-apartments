@@ -6,33 +6,24 @@ import * as I from 'fp-ts/Identity';
 import * as O from 'fp-ts/Option';
 import { pipe } from 'fp-ts/function';
 
-export interface GetCurrentService {
-  readonly get: () => O.Option<ServiceId.ServiceId>;
-}
-
 export const publishOfferApi =
-  (currentService: GetCurrentService) =>
+  (id: ServiceId.ServiceId) =>
   (publish: (data: OfferDocument.OfferDocument) => void) =>
   (
     data: OfferDocument.OfferDocumentSimplifed
   ): O.Option<OfferDocument.OfferDocument> =>
     pipe(
-      currentService.get(),
-      O.chain((id) =>
+      data,
+      OfferDocument.parse,
+      E.map((document) =>
         pipe(
-          data,
-          OfferDocument.parse,
-          E.map((document) =>
-            pipe(
-              document,
-              I.chainFirst(Repository.get(id).create),
-              I.chainFirst(publish)
-            )
-          ),
-          E.fold((e) => {
-            console.error(e);
-            return O.none;
-          }, O.some)
+          document,
+          I.chainFirst(Repository.get(id).create),
+          I.chainFirst(publish)
         )
-      )
+      ),
+      E.fold((e) => {
+        console.error(e);
+        return O.none;
+      }, O.some)
     );

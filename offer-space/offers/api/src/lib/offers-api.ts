@@ -7,9 +7,9 @@ import { ServiceId } from '@ga/service-id-in-offer-space';
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import { pipe } from 'fp-ts/function';
-import { computed, observable } from 'mobx';
-import { getOfferListApi } from './get-offer-list';
-import { publishOfferApi } from './publish-offer';
+import { computed } from 'mobx';
+import { getOfferListApi as getOfferList } from './get-offer-list';
+import { publishOfferApi as publishOffer } from './publish-offer';
 
 interface PublishOffer {
   readonly publishOffer: (
@@ -25,33 +25,19 @@ interface OfferListObservable {
 
 type Service = PublishOffer & OfferListObservable;
 
-const _get = () =>
-  ({
-    publishOffer: publishOfferApi,
-    getOfferList: getOfferListApi,
-  } as const);
-
 export const get = (serviceId: ServiceId): Service => {
-  const currentService = observable.box(O.some(serviceId));
-
   const offerAdded = OfferAdded.get();
 
-  const offersApi = _get();
+  const _publishOffer = publishOffer(serviceId)(offerAdded.publish);
 
-  const publishOffer = offersApi.publishOffer(currentService)(
-    offerAdded.publish
-  );
-
-  const _offerList = OfferList.get(offersApi.getOfferList)(currentService)(
-    offerAdded
-  );
+  const _offerList = OfferList.get(getOfferList)(serviceId)(offerAdded);
 
   const offerList = computed(() =>
     pipe(_offerList.get(), O.map(RNEA.map(OfferStruct.toJSON)))
   );
 
   return {
-    publishOffer,
+    publishOffer: _publishOffer,
     offerList,
   } as const;
 };

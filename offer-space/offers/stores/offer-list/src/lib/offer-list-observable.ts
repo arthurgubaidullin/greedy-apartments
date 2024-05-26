@@ -2,7 +2,6 @@ import * as OfferStruct from '@ga/offer-struct-in-offer-space';
 import { ReadonlyObservable } from '@ga/readonly-observable';
 import * as ServiceId from '@ga/service-id-in-offer-space';
 import * as _Eq from 'fp-ts/Eq';
-import * as I from 'fp-ts/Identity';
 import * as O from 'fp-ts/Option';
 import * as RA from 'fp-ts/ReadonlyArray';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
@@ -14,10 +13,6 @@ import {
   observable,
   onBecomeObserved,
 } from 'mobx';
-
-interface GetCurrentService {
-  readonly get: () => O.Option<ServiceId.ServiceId>;
-}
 
 type T = O.Option<RNEA.ReadonlyNonEmptyArray<OfferStruct.OfferStruct>>;
 
@@ -32,15 +27,12 @@ const update =
       id: ServiceId.ServiceId
     ) => ReadonlyArray<OfferStruct.OfferStruct>
   ) =>
-  (currentService: GetCurrentService) =>
+  (id: ServiceId.ServiceId) =>
   (_offerList: IObservableValue<T>) =>
     action((): void => {
       pipe(
-        currentService.get(),
-        O.map((id) =>
-          pipe(getOfferList(id), O.fromPredicate(RA.isNonEmpty), (list) =>
-            _offerList.set(list)
-          )
+        pipe(getOfferList(id), O.fromPredicate(RA.isNonEmpty), (list) =>
+          _offerList.set(list)
         )
       );
     });
@@ -51,13 +43,13 @@ export const get =
       id: ServiceId.ServiceId
     ) => ReadonlyArray<OfferStruct.OfferStruct>
   ) =>
-  (currentService: GetCurrentService) =>
+  (id: ServiceId.ServiceId) =>
   (
     offerAdded: ReadonlyObservable<O.Option<OfferStruct.OfferStruct>>
   ): ReadonlyObservable<T> => {
     const _offerList = createOfferList();
 
-    const _update = update(getOfferList)(currentService)(_offerList);
+    const _update = update(getOfferList)(id)(_offerList);
 
     onBecomeObserved(_offerList, () => {
       _update();
@@ -65,8 +57,7 @@ export const get =
 
     autorun(() =>
       pipe(
-        currentService.get(),
-        I.map(() => offerAdded.get()),
+        offerAdded.get(),
         O.fold(constVoid, () => _update())
       )
     );
