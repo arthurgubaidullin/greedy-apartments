@@ -6,9 +6,15 @@ import { IObservableValue, action } from 'mobx';
 export const connectToService = (
   currentServiceId: IObservableValue<O.Option<NonEmptyString>>
 ) =>
-  action((serviceId: NonEmptyString) =>
+  action((serviceId: NonEmptyString): void =>
     pipe(
       currentServiceId.get(),
-      O.fold(() => currentServiceId.set(O.some(serviceId)), constVoid)
+      O.fold(
+        () =>
+          pipe(currentServiceId.set(O.some(serviceId)), () => {
+            console.log('The service is connected.');
+          }),
+        constVoid
+      )
     )
   );
