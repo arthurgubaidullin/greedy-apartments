@@ -32,9 +32,6 @@
       "@ga/current-service-store-in-offer-space": [
         "offer-space/services/stores/current/src/index.ts"
       ],
-      "@ga/get-offer-list-api-in-tenant-space": [
-        "tenant-space/offers/get-list-api/src/index.ts"
-      ],
       "@ga/get-realtor-api-in-registry": [
         "registry/get-realtor-api/src/index.ts"
       ],
@@ -56,23 +53,14 @@
       "@ga/offer-document-in-realtor-space": [
         "realtor-space/offers/offer/document/src/index.ts"
       ],
-      "@ga/offer-document-in-tenant-space": [
-        "tenant-space/offers/offer-document/src/index.ts"
-      ],
       "@ga/offer-id-in-offer-space": [
         "offer-space/offers/offer/id/src/index.ts"
       ],
       "@ga/offer-id-in-realtor-space": [
         "realtor-space/offers/offer/id/src/index.ts"
       ],
-      "@ga/offer-id-in-tenant-space": [
-        "tenant-space/offers/offer-id/src/index.ts"
-      ],
       "@ga/offer-in-realtor-space": [
         "realtor-space/offers/offer/entity/src/index.ts"
-      ],
-      "@ga/offer-list-in-tenant-space": [
-        "tenant-space/offers/offer-list-observable/src/index.ts"
       ],
       "@ga/offer-list-store-in-offer-space": [
         "offer-space/offers/stores/offer-list/src/index.ts"
@@ -80,17 +68,11 @@
       "@ga/offer-list-store-in-realtor-space": [
         "realtor-space/offers/stores/offer-list/src/index.ts"
       ],
-      "@ga/offer-repository-in-tenant-space": [
-        "tenant-space/offers/offer-repository/src/index.ts"
-      ],
       "@ga/offer-struct-in-offer-space": [
         "offer-space/offers/offer/struct/src/index.ts"
       ],
       "@ga/offer-struct-in-realtor-space": [
         "realtor-space/offers/offer/struct/src/index.ts"
-      ],
-      "@ga/offer-struct-in-tenant-space": [
-        "tenant-space/offers/offer-struct/src/index.ts"
       ],
       "@ga/offers-api-in-offer-space": ["offer-space/offers/api/src/index.ts"],
       "@ga/offers-api-in-realtor-space": [
