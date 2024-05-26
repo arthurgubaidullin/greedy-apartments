@@ -1,0 +1,19 @@
+{
+  "name": "offers-api-in-realtor-space",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "realtor-space/offers/api/src",
+  "projectType": "library",
+  "tags": ["slice:realtor-space", "tier:api"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/realtor-space/offers/api",
+        "main": "realtor-space/offers/api/src/index.ts",
+        "tsConfig": "realtor-space/offers/api/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}
