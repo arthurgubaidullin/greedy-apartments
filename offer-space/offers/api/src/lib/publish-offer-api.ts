@@ -6,7 +6,7 @@ import * as I from 'fp-ts/Identity';
 import * as O from 'fp-ts/Option';
 import { pipe } from 'fp-ts/function';
 
-interface GetCurrentService {
+export interface GetCurrentService {
   readonly get: () => O.Option<ServiceId.ServiceId>;
 }
 

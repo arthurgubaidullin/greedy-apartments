@@ -4,7 +4,7 @@ import * as OfferAdded from '@ga/offer-added-observable-in-offer-space';
 import * as OfferDocument from '@ga/offer-document-in-offer-space';
 import * as OfferList from '@ga/offer-list-store-in-offer-space';
 import * as OfferStruct from '@ga/offer-struct-in-offer-space';
-import { publishOfferApi } from '@ga/publish-offer-api-in-offer-space';
+import * as OffersApi from '@ga/offers-api-in-offer-space';
 import { ReadonlyObservable } from '@ga/readonly-observable';
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
@@ -36,9 +36,15 @@ export const get = (): Service => {
 
   const offerAdded = OfferAdded.get();
 
-  const publishOffer = publishOfferApi(currentService)(offerAdded.publish);
+  const offersApi = OffersApi.get();
 
-  const _offerList = OfferList.getOfferList(currentService)(offerAdded);
+  const publishOffer = offersApi.publishOffer(currentService)(
+    offerAdded.publish
+  );
+
+  const _offerList = OfferList.getOfferList(offersApi.getOfferListApi)(
+    currentService
+  )(offerAdded);
 
   const offerList = computed(() =>
     pipe(_offerList.get(), O.map(RNEA.map(OfferStruct.toJSON)))

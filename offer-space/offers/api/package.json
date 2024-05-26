@@ -2,7 +2,11 @@
   "name": "@ga/offers-api-in-offer-space",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@ga/offer-document-in-offer-space": "0.0.1",
+    "@ga/offers-repository-in-memory-in-offer-space": "0.0.1",
+    "@ga/service-id-in-offer-space": "0.0.1",
+    "fp-ts": "^2.16.5"
   },
   "type": "commonjs",
   "main": "./src/index.js",

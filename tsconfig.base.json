@@ -35,9 +35,6 @@
       "@ga/current-service-observable-in-offer-space": [
         "offer-space/observables/current-service/src/index.ts"
       ],
-      "@ga/get-offer-list-api-in-offer-space": [
-        "offer-space/get-offer-list-api/src/index.ts"
-      ],
       "@ga/get-offer-list-api-in-tenant-space": [
         "tenant-space/offers/get-list-api/src/index.ts"
       ],
@@ -110,9 +107,6 @@
       ],
       "@ga/public-api-in-tenant-space": [
         "tenant-space/public-api/src/index.ts"
-      ],
-      "@ga/publish-offer-api-in-offer-space": [
-        "offer-space/publish-offer-api/src/index.ts"
       ],
       "@ga/readonly-observable": ["observables/readonly/src/index.ts"],
       "@ga/realtor-added-observable-in-registry": [
