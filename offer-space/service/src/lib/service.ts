@@ -8,7 +8,9 @@ import { publishOfferApi } from '@ga/publish-offer-api-in-offer-space';
 import { ReadonlyObservable } from '@ga/readonly-observable';
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
+import { pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';
+import { computed } from 'mobx';
 
 interface ChangeService {
   readonly changeService: (value: NonEmptyString) => void;
@@ -22,13 +24,13 @@ interface PublishOffer {
 
 interface OfferListObservable {
   readonly offerList: ReadonlyObservable<
-    O.Option<RNEA.ReadonlyNonEmptyArray<OfferStruct.OfferStruct>>
+    O.Option<RNEA.ReadonlyNonEmptyArray<OfferStruct.OfferStructSimplified>>
   >;
 }
 
 type Service = PublishOffer & OfferListObservable & ChangeService;
 
-export const get = () => {
+export const get = (): Service => {
   const currentService = CurrentService.create();
   const changeService = changeServiceApi(currentService);
 
@@ -36,11 +38,15 @@ export const get = () => {
 
   const publishOffer = publishOfferApi(currentService)(offerAdded.publish);
 
-  const offerList = OfferList.getOfferList(currentService)(offerAdded);
+  const _offerList = OfferList.getOfferList(currentService)(offerAdded);
+
+  const offerList = computed(() =>
+    pipe(_offerList.get(), O.map(RNEA.map(OfferStruct.toJSON)))
+  );
 
   return {
     offerList,
     publishOffer,
     changeService,
-  } as const satisfies Service;
+  };
 };

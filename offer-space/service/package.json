@@ -12,7 +12,8 @@
     "@ga/change-service-api-in-offer-space": "0.0.1",
     "@ga/current-service-observable-in-offer-space": "0.0.1",
     "io-ts-types": "^0.5.19",
-    "@ga/readonly-observable": "0.0.1"
+    "@ga/readonly-observable": "0.0.1",
+    "mobx": "^6.12.3"
   },
   "type": "commonjs",
   "main": "./src/index.js",
