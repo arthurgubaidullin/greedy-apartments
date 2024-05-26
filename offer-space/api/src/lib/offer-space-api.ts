@@ -1,16 +1,16 @@
-import * as ServicesApi from '@ga/services-api-in-offer-space';
 import * as CurrentService from '@ga/current-service-store-in-offer-space';
 import * as OfferDocument from '@ga/offer-document-in-offer-space';
 import * as OfferStruct from '@ga/offer-struct-in-offer-space';
 import * as OffersApi from '@ga/offers-api-in-offer-space';
 import { ReadonlyObservable } from '@ga/readonly-observable';
+import * as ServiceId from '@ga/service-id-in-offer-space';
+import * as ServicesApi from '@ga/services-api-in-offer-space';
+import * as I from 'fp-ts/Identity';
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import { pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';
 import { action, computed } from 'mobx';
-import * as I from 'fp-ts/Identity';
-import * as ServiceId from '@ga/service-id-in-offer-space';
 
 interface PublishOffer {
   readonly publishOffer: (
@@ -53,7 +53,9 @@ export const get = (serviceId: NonEmptyString): Service => {
         O.chain((s) =>
           pipe(
             s.publishOffer(data),
-            I.chainFirst(() => servicesApi.serviceUpdated.set(_serviceId))
+            O.map(
+              I.chainFirst(() => servicesApi.serviceUpdated.set(_serviceId))
+            )
           )
         )
       )

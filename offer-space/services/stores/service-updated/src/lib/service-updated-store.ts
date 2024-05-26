@@ -1,18 +1,38 @@
 import * as ServiceId from '@ga/service-id-in-offer-space';
 import * as _Eq from 'fp-ts/Eq';
 import * as O from 'fp-ts/Option';
-import { IObservableValue, observable } from 'mobx';
+import { pipe } from 'fp-ts/function';
+import * as N from 'fp-ts/number';
+import { IObservableValue, action, observable } from 'mobx';
 
-type ServiceIdOption = O.Option<ServiceId.ServiceId>;
+type T = O.Option<{ id: ServiceId.ServiceId; version: number }>;
 
-const create = (): IObservableValue<ServiceIdOption> =>
-  observable.box<ServiceIdOption>(O.none, {
-    equals: O.getEq(ServiceId.Eq).equals,
-  } satisfies _Eq.Eq<ServiceIdOption>);
+const create = (): IObservableValue<T> =>
+  observable.box<T>(O.none, {
+    equals: O.getEq(
+      _Eq.struct({
+        id: ServiceId.Eq,
+        version: N.Eq,
+      })
+    ).equals,
+  } satisfies _Eq.Eq<T>);
 
 const topic = create();
 
 export const get = () => ({
   get: () => topic.get(),
-  set: (id: ServiceId.ServiceId) => topic.set(O.some(id)),
+  set: action((id: ServiceId.ServiceId) =>
+    topic.set(
+      O.some({
+        id,
+        version: pipe(
+          topic.get(),
+          O.fold(
+            () => 0,
+            (a) => a.version + 1
+          )
+        ),
+      })
+    )
+  ),
 });
