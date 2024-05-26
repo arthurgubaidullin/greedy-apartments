@@ -45,7 +45,7 @@ const update =
       );
     });
 
-export const getOfferList =
+export const get =
   (
     getOfferList: (
       id: ServiceId.ServiceId

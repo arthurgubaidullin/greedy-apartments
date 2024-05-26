@@ -42,9 +42,9 @@ export const get = (): Service => {
     offerAdded.publish
   );
 
-  const _offerList = OfferList.getOfferList(offersApi.getOfferList)(
-    currentService
-  )(offerAdded);
+  const _offerList = OfferList.get(offersApi.getOfferList)(currentService)(
+    offerAdded
+  );
 
   const offerList = computed(() =>
     pipe(_offerList.get(), O.map(RNEA.map(OfferStruct.toJSON)))
