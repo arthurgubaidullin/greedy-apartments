@@ -57,7 +57,7 @@
         "realtor-space/offers/stores/offer-added/src/index.ts"
       ],
       "@ga/offer-document-in-offer-space": [
-        "offer-space/offer-document/src/index.ts"
+        "offer-space/offers/offer/document/src/index.ts"
       ],
       "@ga/offer-document-in-realtor-space": [
         "realtor-space/offers/offer/document/src/index.ts"
