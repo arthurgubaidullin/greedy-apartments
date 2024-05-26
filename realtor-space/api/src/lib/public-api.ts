@@ -1,13 +1,14 @@
+import * as CurrentServiceApi from '@ga/current-service-api-in-realtor-space';
 import * as OfferStruct from '@ga/offer-struct-in-realtor-space';
+import { ReadonlyObservable } from '@ga/readonly-observable';
+import * as OfferSpace from '@ga/service-in-offer-space';
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import { constVoid, pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';
-import { computed, observable } from 'mobx';
+import { computed } from 'mobx';
 import { CreateOffer } from './create-offer';
 import * as PrivateApi from './private-api';
-import { ReadonlyObservable } from '@ga/readonly-observable';
-import * as CurrentServiceApi from '@ga/current-service-api-in-realtor-space';
 
 interface RemoteOfferListObservable {
   readonly remoteOfferList: ReadonlyObservable<
@@ -51,12 +52,21 @@ export const get = () => {
     )
   );
 
+  const remoteOfferList = computed(() =>
+    pipe(
+      currentServiceIdApi.currentServiceId.get(),
+      O.chain((currentServiceId) => {
+        const api = OfferSpace.get();
+        api.changeService(currentServiceId);
+        return api.offerList.get();
+      })
+    )
+  );
+
   return {
     createOffer: privateApi.createOffer,
     offerList,
-    remoteOfferList: observable.box<
-      O.Option<RNEA.ReadonlyNonEmptyArray<OfferStruct.OfferStruct>>
-    >(O.none),
+    remoteOfferList,
     ...currentServiceIdApi,
   } as const satisfies PublicApi;
 };
