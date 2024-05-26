@@ -2,6 +2,7 @@ import * as _CurrentServiceIdObservable from '@ga/current-service-id-observable-
 import { ReadonlyObservable } from '@ga/readonly-observable';
 import * as O from 'fp-ts/Option';
 import { NonEmptyString } from 'io-ts-types';
+import { connectToService } from './connect-to-service';
 
 interface CurrentServiceIdObservable {
   readonly currentServiceId: ReadonlyObservable<O.Option<NonEmptyString>>;
@@ -16,8 +17,6 @@ export const get = (): CurrentServiceIdObservable & ConnectToService => {
 
   return {
     currentServiceId: currentServiceIdStore,
-    connectToService: _CurrentServiceIdObservable.connect(
-      currentServiceIdStore
-    ),
+    connectToService: connectToService(currentServiceIdStore),
   };
 };
