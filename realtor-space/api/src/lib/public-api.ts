@@ -11,7 +11,7 @@ import * as PrivateApi from './private-api';
 import * as PublishedOffersService from './published-offers-service';
 
 interface RemoteOfferListObservable {
-  readonly remoteOfferList: ReadonlyObservable<
+  readonly publishedOfferList: ReadonlyObservable<
     O.Option<RNEA.ReadonlyNonEmptyArray<OfferStruct.OfferStruct>>
   >;
 }
@@ -65,7 +65,7 @@ export const get = () => {
     )
   );
 
-  const remoteOfferList = computed(() =>
+  const publishedOfferList = computed(() =>
     pipe(
       publishedOffersService.get(),
       O.chain((service) => service.publishedOfferList.get())
@@ -75,7 +75,7 @@ export const get = () => {
   return {
     createOffer: privateApi.createOffer,
     offerList,
-    remoteOfferList,
+    publishedOfferList,
     ...currentServiceIdApi,
   } as const satisfies PublicApi;
 };

@@ -7,98 +7,99 @@ import { observer } from 'mobx-react-lite';
 import * as P from '../program/program';
 
 const ChangeRemoteOfferService = observer(() => (
-    <div>
-      <h2>Change remote offer service</h2>
+  <div>
+    <h2>Change remote offer service</h2>
 
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
 
-          const formData = new FormData(e.currentTarget);
+        const formData = new FormData(e.currentTarget);
 
-          pipe(
-            E.Do,
-            E.bindW('serviceId', () =>
-              pipe(
-                formData.get('service-id'),
-                E.fromPredicate(
-                  NonEmptyString.is,
-                  () => new Error('Invalid remote service id.')
-                )
+        pipe(
+          E.Do,
+          E.bindW('serviceId', () =>
+            pipe(
+              formData.get('service-id'),
+              E.fromPredicate(
+                NonEmptyString.is,
+                () => new Error('Invalid remote service id.')
               )
-            ),
-            E.map((a) => P.remoteOffers.changeService(a.serviceId)),
-            E.fold((e) => {
-              console.error(e);
-            }, identity)
-          );
+            )
+          ),
+          E.map((a) => P.realtorSpace.connectToService(a.serviceId)),
+          E.fold((e) => {
+            console.error(e);
+          }, identity)
+        );
 
-          e.currentTarget.reset();
-        }}
-      >
-        <label>
-          Service ID:
-          <input type="text" name="service-id" required />
-        </label>
-        <br />
+        e.currentTarget.reset();
+      }}
+    >
+      <label>
+        Service ID:
+        <input type="text" name="service-id" required />
+      </label>
+      <br />
 
-        <input type="submit" />
-      </form>
-    </div>
-  ));
+      <input type="submit" />
+    </form>
+  </div>
+));
 
 const NewOfferForm = observer(() => (
-    <div>
-      <h2>New Offer form</h2>
+  <div>
+    <h2>New Offer form</h2>
 
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
 
-          const formData = new FormData(e.currentTarget);
+        const formData = new FormData(e.currentTarget);
 
-          pipe(
-            E.Do,
-            E.bind('id', () =>
-              pipe(
-                crypto.randomUUID(),
-                E.fromPredicate(
-                  NonEmptyString.is,
-                  () => new Error('Invalid offer id.')
-                )
+        pipe(
+          E.Do,
+          E.bind('id', () =>
+            pipe(
+              crypto.randomUUID(),
+              E.fromPredicate(
+                NonEmptyString.is,
+                () => new Error('Invalid offer id.')
               )
-            ),
-            E.bindW('name', () =>
-              pipe(
-                formData.get('name'),
-                E.fromPredicate(
-                  NonEmptyString.is,
-                  () => new Error('Invalid realtor name.')
-                )
+            )
+          ),
+          E.bindW('name', () =>
+            pipe(
+              formData.get('name'),
+              E.fromPredicate(
+                NonEmptyString.is,
+                () => new Error('Invalid realtor name.')
               )
-            ),
-            E.map((a) => P.realtorManagement.createOffer(a)),
-            E.fold((e) => {
-              console.error(e);
-            }, identity)
-          );
+            )
+          ),
+          E.map((a) => P.realtorSpace.createOffer(a)),
+          E.fold((e) => {
+            console.error(e);
+          }, identity)
+        );
 
-          e.currentTarget.reset();
-        }}
-      >
-        <label>
-          Name:
-          <input type="text" name="name" required />
-        </label>
-        <br />
+        e.currentTarget.reset();
+      }}
+    >
+      <label>
+        Name:
+        <input type="text" name="name" required />
+      </label>
+      <br />
 
-        <input type="submit" />
-      </form>
-    </div>
-  ));
+      <input type="submit" />
+    </form>
+  </div>
+));
 
-const OfferList = observer(() => pipe(
-    P.realtorManagement.offerList.get(),
+const OfferList = observer(() =>
+  pipe(
+    P.realtorSpace.offerList.get(),
     O.fold(
       () => <p>No offers!</p>,
       flow(
@@ -109,7 +110,7 @@ const OfferList = observer(() => pipe(
               onClick={(e) => {
                 e.preventDefault();
 
-                P.remoteOffers.publishOffer(offer);
+                offer.publish();
               }}
             >
               Publish
@@ -126,10 +127,12 @@ const OfferList = observer(() => pipe(
         {list}
       </div>
     )
-  ));
+  )
+);
 
-const PublishedOfferList = observer(() => pipe(
-    P.remoteOffers.offerList.get(),
+const PublishedOfferList = observer(() =>
+  pipe(
+    P.realtorSpace.publishedOfferList.get(),
     O.fold(
       () => <p>No offers!</p>,
       flow(
@@ -144,20 +147,21 @@ const PublishedOfferList = observer(() => pipe(
         {list}
       </div>
     )
-  ));
+  )
+);
 
 export const RealtorManagement = observer(() => (
-    <div>
-      <h1>Realtor Management</h1>
+  <div>
+    <h1>Realtor Management</h1>
 
-      <NewOfferForm />
+    <NewOfferForm />
 
-      <OfferList />
+    <OfferList />
 
-      <ChangeRemoteOfferService />
+    <ChangeRemoteOfferService />
 
-      <PublishedOfferList />
-    </div>
-  ));
+    <PublishedOfferList />
+  </div>
+));
 
 export default RealtorManagement;
