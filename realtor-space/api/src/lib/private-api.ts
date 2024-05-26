@@ -13,11 +13,4 @@ interface OfferListObservable {
 
 type PrivateApi = CreateOffer & OfferListObservable;
 
-export const get = () => {
-  const offersApi = OffersApi.get();
-
-  return {
-    offerList: offersApi.offerList,
-    createOffer: offersApi.createOffer,
-  } as const satisfies PrivateApi;
-};
+export const get = (): PrivateApi => OffersApi.get();
