@@ -28,6 +28,9 @@
       "@ga/create-offer-in-realtor-space": [
         "realtor-space/create-offer/src/index.ts"
       ],
+      "@ga/current-service-api-in-realtor-space": [
+        "realtor-space/current-service/api/src/index.ts"
+      ],
       "@ga/current-service-id-observable-in-realtor-space": [
         "realtor-space/observables/current-service-id/src/index.ts"
       ],

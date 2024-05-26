@@ -1,0 +1,19 @@
+{
+  "name": "current-service-api-in-realtor-space",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "realtor-space/current-service/api/src",
+  "projectType": "library",
+  "tags": ["slice:realtor-space", "tier:api"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/realtor-space/current-service/api",
+        "main": "realtor-space/current-service/api/src/index.ts",
+        "tsConfig": "realtor-space/current-service/api/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}
