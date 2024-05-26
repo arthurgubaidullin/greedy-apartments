@@ -80,8 +80,8 @@
       "@ga/offer-list-in-tenant-space": [
         "tenant-space/offers/offer-list-observable/src/index.ts"
       ],
-      "@ga/offer-list-observable-in-offer-space": [
-        "offer-space/observables/offer-list/src/index.ts"
+      "@ga/offer-list-store-in-offer-space": [
+        "offer-space/offers/stores/offer-list/src/index.ts"
       ],
       "@ga/offer-list-store-in-realtor-space": [
         "realtor-space/offers/stores/offer-list/src/index.ts"

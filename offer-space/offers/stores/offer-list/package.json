@@ -1,5 +1,5 @@
 {
-  "name": "@ga/offer-list-observable-in-offer-space",
+  "name": "@ga/offer-list-store-in-offer-space",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
