@@ -1,0 +1,14 @@
+{
+  "name": "@ga/offer-document-in-offer-space",
+  "version": "0.0.1",
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "io-ts": "^2.2.21",
+    "@ga/offer-id-in-offer-space": "0.0.1",
+    "fp-ts": "^2.16.5"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "private": true
+}

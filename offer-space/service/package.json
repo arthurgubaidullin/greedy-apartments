@@ -1,0 +1,21 @@
+{
+  "name": "@ga/service-in-offer-space",
+  "version": "0.0.1",
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "@ga/offer-document-in-offer-space": "0.0.1",
+    "@ga/offer-list-observable-in-offer-space": "0.0.1",
+    "@ga/offer-struct-in-offer-space": "0.0.1",
+    "@ga/publish-offer-api-in-offer-space": "0.0.1",
+    "fp-ts": "^2.16.5",
+    "mobx": "^6.12.3",
+    "@ga/offer-added-observable-in-offer-space": "0.0.1",
+    "@ga/change-service-api-in-offer-space": "0.0.1",
+    "@ga/current-service-observable-in-offer-space": "0.0.1",
+    "io-ts-types": "^0.5.19"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "private": true
+}

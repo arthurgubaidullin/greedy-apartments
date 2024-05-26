@@ -62,11 +62,8 @@
                 "onlyDependOnLibsWithTags": ["slice:tenant-space", "slice:apis"]
               },
               {
-                "sourceTag": "slice:remote-offer-register",
-                "onlyDependOnLibsWithTags": [
-                  "slice:remote-offer-register",
-                  "slice:apis"
-                ]
+                "sourceTag": "slice:offer-space",
+                "onlyDependOnLibsWithTags": ["slice:offer-space", "slice:apis"]
               },
               {
                 "sourceTag": "slice:app",
