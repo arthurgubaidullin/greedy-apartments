@@ -17,6 +17,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ga/api-in-offer-space": ["offer-space/api/src/index.ts"],
       "@ga/api-in-realtor-space": ["realtor-space/api/src/index.ts"],
       "@ga/api-in-registry": ["registry/api/src/index.ts"],
       "@ga/change-service-api-in-offer-space": [
@@ -154,7 +155,6 @@
       ],
       "@ga/service-id-in-offer-space": ["offer-space/service-id/src/index.ts"],
       "@ga/service-id-in-registry": ["registry/service/id/src/index.ts"],
-      "@ga/service-in-offer-space": ["offer-space/service/src/index.ts"],
       "@ga/subscribe-to-realtor-register-api-in-tenant-space": [
         "tenant-space/realtors/subscribe-to-realtor-register-api/src/index.ts"
       ],

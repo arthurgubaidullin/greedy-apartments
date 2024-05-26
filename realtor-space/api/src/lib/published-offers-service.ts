@@ -1,5 +1,5 @@
 import { ReadonlyObservable } from '@ga/readonly-observable';
-import * as OfferSpace from '@ga/service-in-offer-space';
+import * as OfferSpace from '@ga/api-in-offer-space';
 import * as O from 'fp-ts/Option';
 import { pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';

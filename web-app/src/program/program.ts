@@ -1,5 +1,5 @@
 import * as RealtorSpace from '@ga/api-in-realtor-space';
-import * as RemoteOfferService from '@ga/service-in-offer-space';
+import * as RemoteOfferService from '@ga/api-in-offer-space';
 import * as TenantSpaceService from '@ga/public-api-in-tenant-space';
 import * as RealtorRegistry from '@ga/api-in-registry';
 

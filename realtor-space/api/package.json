@@ -10,8 +10,8 @@
     "io-ts-types": "^0.5.19",
     "@ga/readonly-observable": "0.0.1",
     "@ga/current-service-api-in-realtor-space": "0.0.1",
-    "@ga/service-in-offer-space": "0.0.1",
-    "@ga/offers-api-in-realtor-space": "0.0.1"
+    "@ga/offers-api-in-realtor-space": "0.0.1",
+    "@ga/api-in-offer-space": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
