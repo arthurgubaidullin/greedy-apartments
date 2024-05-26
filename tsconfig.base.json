@@ -62,17 +62,21 @@
         "offer-space/offer-document/src/index.ts"
       ],
       "@ga/offer-document-in-realtor-space": [
-        "realtor-space/offer/document/src/index.ts"
+        "realtor-space/offers/offer/document/src/index.ts"
       ],
       "@ga/offer-document-in-tenant-space": [
         "tenant-space/offers/offer-document/src/index.ts"
       ],
       "@ga/offer-id-in-offer-space": ["offer-space/offer-id/src/index.ts"],
-      "@ga/offer-id-in-realtor-space": ["realtor-space/offer/id/src/index.ts"],
+      "@ga/offer-id-in-realtor-space": [
+        "realtor-space/offers/offer/id/src/index.ts"
+      ],
       "@ga/offer-id-in-tenant-space": [
         "tenant-space/offers/offer-id/src/index.ts"
       ],
-      "@ga/offer-in-realtor-space": ["realtor-space/offer/entity/src/index.ts"],
+      "@ga/offer-in-realtor-space": [
+        "realtor-space/offers/offer/entity/src/index.ts"
+      ],
       "@ga/offer-list-in-tenant-space": [
         "tenant-space/offers/offer-list-observable/src/index.ts"
       ],
@@ -89,7 +93,7 @@
         "offer-space/offer-struct/src/index.ts"
       ],
       "@ga/offer-struct-in-realtor-space": [
-        "realtor-space/offer/struct/src/index.ts"
+        "realtor-space/offers/offer/struct/src/index.ts"
       ],
       "@ga/offer-struct-in-tenant-space": [
         "tenant-space/offers/offer-struct/src/index.ts"
