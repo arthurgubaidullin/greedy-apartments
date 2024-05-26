@@ -65,7 +65,9 @@
       "@ga/offer-document-in-tenant-space": [
         "tenant-space/offers/offer-document/src/index.ts"
       ],
-      "@ga/offer-id-in-offer-space": ["offer-space/offer-id/src/index.ts"],
+      "@ga/offer-id-in-offer-space": [
+        "offer-space/offers/offer/id/src/index.ts"
+      ],
       "@ga/offer-id-in-realtor-space": [
         "realtor-space/offers/offer/id/src/index.ts"
       ],
