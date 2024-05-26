@@ -1,5 +1,5 @@
 import * as OfferDocument from '@ga/offer-document-in-offer-space';
-import * as Repository from '@ga/offer-repository-in-offer-space';
+import * as Repository from '@ga/offers-repository-in-memory-in-offer-space';
 import * as ServiceId from '@ga/service-id-in-offer-space';
 import * as E from 'fp-ts/Either';
 import * as I from 'fp-ts/Identity';
