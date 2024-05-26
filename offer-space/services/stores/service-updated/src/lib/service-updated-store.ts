@@ -5,7 +5,14 @@ import { IObservableValue, observable } from 'mobx';
 
 type ServiceIdOption = O.Option<ServiceId.ServiceId>;
 
-export const create = (): IObservableValue<ServiceIdOption> =>
+const create = (): IObservableValue<ServiceIdOption> =>
   observable.box<ServiceIdOption>(O.none, {
     equals: O.getEq(ServiceId.Eq).equals,
   } satisfies _Eq.Eq<ServiceIdOption>);
+
+const topic = create();
+
+export const get = () => ({
+  get: () => topic.get(),
+  set: (id: ServiceId.ServiceId) => topic.set(O.some(id)),
+});
