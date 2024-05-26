@@ -9,7 +9,10 @@
     "@ga/create-offer-in-realtor-space": "0.0.1",
     "@ga/create-offer-api-in-realtor-space": "0.0.1",
     "@ga/offer-added-observable-in-realtor-space": "0.0.1",
-    "@ga/offer-struct-in-realtor-space": "0.0.1"
+    "@ga/offer-struct-in-realtor-space": "0.0.1",
+    "io-ts-types": "^0.5.19",
+    "@ga/readonly-observable": "0.0.1",
+    "@ga/current-service-api-in-realtor-space": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
