@@ -99,7 +99,7 @@
         "realtor-space/offers/api/src/index.ts"
       ],
       "@ga/offers-repository-in-realtor-space": [
-        "realtor-space/offers/repository/src/index.ts"
+        "realtor-space/offers/repository/in-memory/src/index.ts"
       ],
       "@ga/offet-list-observable-in-realtor-space": [
         "realtor-space/observables/offer-list/src/index.ts"
