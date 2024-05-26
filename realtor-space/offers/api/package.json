@@ -8,8 +8,8 @@
     "@ga/offer-struct-in-realtor-space": "0.0.1",
     "@ga/offer-document-in-realtor-space": "0.0.1",
     "fp-ts": "^2.16.5",
-    "@ga/offer-added-observable-in-realtor-space": "0.0.1",
-    "@ga/offer-list-store-in-realtor-space": "0.0.1"
+    "@ga/offer-list-store-in-realtor-space": "0.0.1",
+    "@ga/offer-added-store-in-realtor-space": "0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",

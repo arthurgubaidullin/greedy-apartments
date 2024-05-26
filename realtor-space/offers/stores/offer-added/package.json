@@ -1,5 +1,5 @@
 {
-  "name": "@ga/offer-added-observable-in-realtor-space",
+  "name": "@ga/offer-added-store-in-realtor-space",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",

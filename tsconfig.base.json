@@ -52,8 +52,8 @@
       "@ga/offer-added-observable-in-offer-space": [
         "offer-space/observables/offer-added/src/index.ts"
       ],
-      "@ga/offer-added-observable-in-realtor-space": [
-        "realtor-space/observables/offer-added/src/index.ts"
+      "@ga/offer-added-store-in-realtor-space": [
+        "realtor-space/offers/stores/offer-added/src/index.ts"
       ],
       "@ga/offer-document-in-offer-space": [
         "offer-space/offer-document/src/index.ts"
