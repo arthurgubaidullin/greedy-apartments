@@ -32,7 +32,7 @@
         "realtor-space/current-service/api/src/index.ts"
       ],
       "@ga/current-service-id-observable-in-realtor-space": [
-        "realtor-space/observables/current-service-id/src/index.ts"
+        "realtor-space/current-service/service-id/observable/src/index.ts"
       ],
       "@ga/current-service-observable-in-offer-space": [
         "offer-space/observables/current-service/src/index.ts"
