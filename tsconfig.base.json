@@ -26,7 +26,7 @@
         "realtor-space/create-offer-api/src/index.ts"
       ],
       "@ga/create-offer-in-realtor-space": [
-        "realtor-space/create-offer/src/index.ts"
+        "realtor-space/offers/create-offer/src/index.ts"
       ],
       "@ga/current-service-api-in-realtor-space": [
         "realtor-space/current-service/api/src/index.ts"
