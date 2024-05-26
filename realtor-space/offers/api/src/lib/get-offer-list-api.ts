@@ -4,5 +4,5 @@ import * as OfferRepository from '@ga/offers-repository-in-realtor-space';
 import { pipe } from 'fp-ts/function';
 import * as RA from 'fp-ts/ReadonlyArray';
 
-export const getOffetListApi = (): ReadonlyArray<OfferStruct.OfferStruct> =>
+export const getOfferListApi = (): ReadonlyArray<OfferStruct.OfferStruct> =>
   pipe(OfferRepository.get().getAll(), RA.map(OfferDocument.codec.encode));
