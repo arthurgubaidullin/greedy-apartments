@@ -5,10 +5,10 @@ import * as OfferDocument from '@ga/offer-document-in-offer-space';
 import * as OfferList from '@ga/offer-list-observable-in-offer-space';
 import * as OfferStruct from '@ga/offer-struct-in-offer-space';
 import { publishOfferApi } from '@ga/publish-offer-api-in-offer-space';
+import { ReadonlyObservable } from '@ga/readonly-observable';
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import { NonEmptyString } from 'io-ts-types';
-import { IObservableValue } from 'mobx';
 
 interface ChangeService {
   readonly changeService: (value: NonEmptyString) => void;
@@ -21,11 +21,8 @@ interface PublishOffer {
 }
 
 interface OfferListObservable {
-  readonly offerList: Pick<
-    IObservableValue<
-      O.Option<RNEA.ReadonlyNonEmptyArray<OfferStruct.OfferStruct>>
-    >,
-    'get'
+  readonly offerList: ReadonlyObservable<
+    O.Option<RNEA.ReadonlyNonEmptyArray<OfferStruct.OfferStruct>>
   >;
 }
 
