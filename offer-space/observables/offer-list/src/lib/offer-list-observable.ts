@@ -14,6 +14,7 @@ import {
   observable,
   onBecomeObserved,
 } from 'mobx';
+import { ReadonlyObservable } from '@ga/readonly-observable';
 
 interface GetCurrentService {
   readonly get: () => O.Option<ServiceId.ServiceId>;
@@ -42,8 +43,8 @@ const update =
 export const getOfferList =
   (currentService: GetCurrentService) =>
   (
-    offerAdded: Pick<IObservableValue<O.Option<OfferStruct.OfferStruct>>, 'get'>
-  ): Pick<IObservableValue<T>, 'get'> => {
+    offerAdded: ReadonlyObservable<O.Option<OfferStruct.OfferStruct>>
+  ): ReadonlyObservable<T> => {
     const _offerList = createOfferList();
 
     const _update = update(currentService)(_offerList);
