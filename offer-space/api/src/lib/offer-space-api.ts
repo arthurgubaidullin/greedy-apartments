@@ -1,4 +1,4 @@
-import { changeServiceApi } from '@ga/change-service-api-in-offer-space';
+import { changeServiceApi } from '@ga/services-api-in-offer-space';
 import * as CurrentService from '@ga/current-service-store-in-offer-space';
 import * as OfferDocument from '@ga/offer-document-in-offer-space';
 import * as OfferStruct from '@ga/offer-struct-in-offer-space';

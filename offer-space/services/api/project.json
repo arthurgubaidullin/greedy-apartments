@@ -1,0 +1,19 @@
+{
+  "name": "services-api-in-offer-space",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "offer-space/services/api/src",
+  "projectType": "library",
+  "tags": ["slice:offer-space", "tier:api"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/offer-space/services/api",
+        "main": "offer-space/services/api/src/index.ts",
+        "tsConfig": "offer-space/services/api/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}

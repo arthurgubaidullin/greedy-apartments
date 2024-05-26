@@ -1,5 +1,5 @@
 {
-  "name": "@ga/change-service-api-in-offer-space",
+  "name": "@ga/services-api-in-offer-space",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
