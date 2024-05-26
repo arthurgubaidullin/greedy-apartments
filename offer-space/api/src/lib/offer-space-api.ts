@@ -10,10 +10,6 @@ import { pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';
 import { action, computed } from 'mobx';
 
-interface ChangeService {
-  readonly changeService: (value: NonEmptyString) => void;
-}
-
 interface PublishOffer {
   readonly publishOffer: (
     data: OfferDocument.OfferDocumentSimplifed
@@ -26,10 +22,12 @@ interface OfferListObservable {
   >;
 }
 
-type Service = PublishOffer & OfferListObservable & ChangeService;
+type Service = PublishOffer & OfferListObservable;
 
-export const get = (): Service => {
+export const get = (serviceId: NonEmptyString): Service => {
   const currentService = CurrentService.create();
+
+  changeServiceApi(currentService)(serviceId);
 
   const offersApi = computed(() =>
     pipe(currentService.get(), O.map(OffersApi.get))
@@ -48,6 +46,5 @@ export const get = (): Service => {
         O.chain((s) => s.publishOffer(data))
       )
     ),
-    changeService: changeServiceApi(currentService),
   };
 };

@@ -12,8 +12,7 @@ export const get = (
     pipe(
       currentServiceId.get(),
       O.map((currentServiceId: NonEmptyString) => {
-        const api = OfferSpace.get();
-        api.changeService(currentServiceId);
+        const api = OfferSpace.get(currentServiceId);
         return {
           publishedOfferList: api.offerList,
           publishOffer: api.publishOffer,
