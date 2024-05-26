@@ -1,0 +1,19 @@
+{
+  "name": "readonly-observable",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "observables/readonly/src",
+  "projectType": "library",
+  "tags": ["tier:lib"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/observables/readonly",
+        "main": "observables/readonly/src/index.ts",
+        "tsConfig": "observables/readonly/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}

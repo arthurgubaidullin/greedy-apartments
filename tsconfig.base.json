@@ -109,6 +109,7 @@
       "@ga/publish-offer-api-in-offer-space": [
         "offer-space/publish-offer-api/src/index.ts"
       ],
+      "@ga/readonly-observable": ["observables/readonly/src/index.ts"],
       "@ga/realtor-added-observable-in-registry": [
         "registry/observables/realtor-added/src/index.ts"
       ],
