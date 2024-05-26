@@ -6,10 +6,8 @@ import { NonEmptyString } from 'io-ts-types';
 import { observer } from 'mobx-react-lite';
 import * as P from '../program/program';
 
-const ChangeRemoteOfferService = observer(() => (
-  <div>
-    <h2>Change remote offer service</h2>
-
+const ChangeRemoteOfferService = observer(() => {
+  const connectToServiceForm = (
     <form
       onSubmit={(e) => {
         e.preventDefault();
@@ -44,8 +42,22 @@ const ChangeRemoteOfferService = observer(() => (
 
       <input type="submit" />
     </form>
-  </div>
-));
+  );
+
+  return (
+    <div>
+      <h2>Connect to service</h2>
+
+      {pipe(
+        P.realtorSpace.currentServiceId.get(),
+        O.fold(
+          () => connectToServiceForm,
+          (id) => <div>The service (id={id}) is connected.</div>
+        )
+      )}
+    </div>
+  );
+});
 
 const NewOfferForm = observer(() => (
   <div>
