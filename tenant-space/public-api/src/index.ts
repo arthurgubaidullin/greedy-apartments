@@ -1,1 +1,1 @@
-export * from './lib/service';
+export * from './lib/tenant-space-api';
