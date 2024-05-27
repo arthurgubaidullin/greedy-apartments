@@ -16,7 +16,7 @@ import {
 
 type T = O.Option<RNEA.ReadonlyNonEmptyArray<OfferStruct.OfferStruct>>;
 
-const createOfferList = () =>
+const createOfferList = (): IObservableValue<T> =>
   observable.box<T>(O.none, {
     equals: O.getEq(RNEA.getEq(OfferStruct.Eq)).equals,
   } satisfies _Eq.Eq<T>);
