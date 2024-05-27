@@ -5,7 +5,8 @@ import * as _Eq from 'fp-ts/Eq';
 import * as O from 'fp-ts/Option';
 import * as RA from 'fp-ts/ReadonlyArray';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
-import { constVoid, pipe } from 'fp-ts/function';
+import { constVoid, flow, pipe } from 'fp-ts/function';
+import * as I from 'fp-ts/Identity';
 import {
   IObservableValue,
   action,
@@ -23,13 +24,14 @@ export const createOfferList = (): IObservableValue<T> =>
   } satisfies _Eq.Eq<T>);
 
 const update = (offerListStore: IObservableValue<T>) =>
-  action((offerList: ReadonlyArray<OfferStruct.OfferStruct>): void => {
-    pipe(
-      pipe(offerList, O.fromPredicate(RA.isNonEmpty), (list) =>
-        offerListStore.set(list)
-      )
-    );
-  });
+  action((offerList: ReadonlyArray<OfferStruct.OfferStruct>): void =>
+    pipe(offerList, O.fromPredicate(RA.isNonEmpty), (list) =>
+      offerListStore.set(list)
+    )
+  );
+
+const reset = (offerListStore: IObservableValue<T>) =>
+  action(() => offerListStore.set(O.none));
 
 export const get =
   (P: {
@@ -56,7 +58,10 @@ export const get =
       );
     });
 
-    onBecomeUnobserved(offerListStore, unsubscribe);
+    onBecomeUnobserved(
+      offerListStore,
+      flow(unsubscribe, I.chainFirst(reset(offerListStore)))
+    );
 
     return offerListStore;
   };
