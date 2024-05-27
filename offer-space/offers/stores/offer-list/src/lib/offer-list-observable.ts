@@ -12,30 +12,24 @@ import {
   autorun,
   observable,
   onBecomeObserved,
+  onBecomeUnobserved,
 } from 'mobx';
 
 type T = O.Option<RNEA.ReadonlyNonEmptyArray<OfferStruct.OfferStruct>>;
 
-const createOfferList = (): IObservableValue<T> =>
+export const createOfferList = (): IObservableValue<T> =>
   observable.box<T>(O.none, {
     equals: O.getEq(RNEA.getEq(OfferStruct.Eq)).equals,
   } satisfies _Eq.Eq<T>);
 
-const update =
-  (
-    getOfferList: (
-      id: ServiceId.ServiceId
-    ) => ReadonlyArray<OfferStruct.OfferStruct>
-  ) =>
-  (id: ServiceId.ServiceId) =>
-  (_offerList: IObservableValue<T>) =>
-    action((): void => {
-      pipe(
-        pipe(getOfferList(id), O.fromPredicate(RA.isNonEmpty), (list) =>
-          _offerList.set(list)
-        )
-      );
-    });
+const update = (offerListStore: IObservableValue<T>) =>
+  action((offerList: ReadonlyArray<OfferStruct.OfferStruct>): void => {
+    pipe(
+      pipe(offerList, O.fromPredicate(RA.isNonEmpty), (list) =>
+        offerListStore.set(list)
+      )
+    );
+  });
 
 export const get =
   (
@@ -47,20 +41,24 @@ export const get =
   (
     offerAdded: ReadonlyObservable<O.Option<OfferStruct.OfferStruct>>
   ): ReadonlyObservable<T> => {
-    const _offerList = createOfferList();
+    const offerListStore = createOfferList();
 
-    const _update = update(getOfferList)(id)(_offerList);
+    const _update = () => pipe(getOfferList(id), update(offerListStore));
 
-    onBecomeObserved(_offerList, () => {
+    let unsubscribe = constVoid;
+
+    onBecomeObserved(offerListStore, () => {
       _update();
+
+      unsubscribe = autorun(() =>
+        pipe(
+          offerAdded.get(),
+          O.fold(constVoid, () => _update())
+        )
+      );
     });
 
-    autorun(() =>
-      pipe(
-        offerAdded.get(),
-        O.fold(constVoid, () => _update())
-      )
-    );
+    onBecomeUnobserved(offerListStore, unsubscribe);
 
-    return _offerList;
+    return offerListStore;
   };
