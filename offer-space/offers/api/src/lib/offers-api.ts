@@ -30,7 +30,7 @@ export const get = (serviceId: ServiceId): Service => {
 
   const _publishOffer = publishOffer(offerAdded)(serviceId);
 
-  const _offerList = OfferList.get(getOfferList)(serviceId)(offerAdded);
+  const _offerList = OfferList.get({ getOfferList, offerAdded })(serviceId);
 
   const offerList = computed(() =>
     pipe(_offerList.get(), O.map(RNEA.map(OfferStruct.toJSON)))

@@ -32,18 +32,16 @@ const update = (offerListStore: IObservableValue<T>) =>
   });
 
 export const get =
-  (
+  (P: {
     getOfferList: (
       id: ServiceId.ServiceId
-    ) => ReadonlyArray<OfferStruct.OfferStruct>
-  ) =>
-  (id: ServiceId.ServiceId) =>
-  (
-    offerAdded: ReadonlyObservable<O.Option<OfferStruct.OfferStruct>>
-  ): ReadonlyObservable<T> => {
+    ) => ReadonlyArray<OfferStruct.OfferStruct>;
+    offerAdded: ReadonlyObservable<O.Option<OfferStruct.OfferStruct>>;
+  }) =>
+  (id: ServiceId.ServiceId): ReadonlyObservable<T> => {
     const offerListStore = createOfferList();
 
-    const _update = () => pipe(getOfferList(id), update(offerListStore));
+    const _update = () => pipe(P.getOfferList(id), update(offerListStore));
 
     let unsubscribe = constVoid;
 
@@ -52,7 +50,7 @@ export const get =
 
       unsubscribe = autorun(() =>
         pipe(
-          offerAdded.get(),
+          P.offerAdded.get(),
           O.fold(constVoid, () => _update())
         )
       );
