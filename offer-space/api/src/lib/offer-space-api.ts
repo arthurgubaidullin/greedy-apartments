@@ -6,6 +6,7 @@ import * as ServiceId from '@ga/service-id-in-offer-space';
 import * as ServicesApi from '@ga/services-api-in-offer-space';
 import * as I from 'fp-ts/Identity';
 import * as O from 'fp-ts/Option';
+import * as RA from 'fp-ts/ReadonlyArray';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import { pipe } from 'fp-ts/function';
 import { NonEmptyString } from 'io-ts-types';
@@ -49,3 +50,6 @@ export const get = (serviceId: NonEmptyString): Service => {
     ),
   };
 };
+
+export const getList = (serviceIds: ReadonlyArray<NonEmptyString>) =>
+  pipe(serviceIds, RA.map(ServiceId.fromNonEmptyString), OffersApi.getList);

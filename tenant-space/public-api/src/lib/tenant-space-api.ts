@@ -18,14 +18,9 @@ export const get = (data: {
       realtorListStore.get(),
       RA.fromOption,
       RA.flatten,
-      RA.flatMap((s) =>
-        pipe(
-          OfferSpace.get(s.serviceId).offerList.get(),
-          RA.fromOption,
-          RA.flatten
-        )
-      ),
-      O.fromPredicate(RA.isNonEmpty)
+      RA.map((a) => a.serviceId),
+      OfferSpace.getList,
+      (store) => store.get()
     )
   );
 
