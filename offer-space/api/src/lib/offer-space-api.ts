@@ -1,4 +1,3 @@
-import * as CurrentService from '@ga/current-service-store-in-offer-space';
 import * as OfferDocument from '@ga/offer-document-in-offer-space';
 import * as OfferStruct from '@ga/offer-struct-in-offer-space';
 import * as OffersApi from '@ga/offers-api-in-offer-space';
@@ -31,32 +30,20 @@ export const get = (serviceId: NonEmptyString): Service => {
 
   const servicesApi = ServicesApi.get();
 
-  const currentService = CurrentService.create();
-
-  servicesApi.changeService(currentService)(serviceId);
-
-  const offersApi = computed(() =>
-    pipe(currentService.get(), O.map(OffersApi.get))
-  );
+  const offersApi = OffersApi.get(_serviceId);
 
   return {
     offerList: computed(() =>
       pipe(
-        offersApi.get(),
-        I.chainFirst(() => servicesApi.serviceUpdated.get()),
-        O.chain((api) => api.offerList.get())
+        offersApi.offerList.get(),
+        I.chainFirst(() => servicesApi.serviceUpdated.get())
       )
     ),
     publishOffer: action((data) =>
       pipe(
-        offersApi.get(),
-        O.chain((s) =>
-          pipe(
-            s.publishOffer(data),
-            O.map(
-              I.chainFirst(() => servicesApi.serviceUpdated.set(_serviceId))
-            )
-          )
+        pipe(
+          offersApi.publishOffer(data),
+          O.map(I.chainFirst(() => servicesApi.serviceUpdated.set(_serviceId)))
         )
       )
     ),

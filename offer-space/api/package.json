@@ -10,7 +10,6 @@
     "@ga/readonly-observable": "0.0.1",
     "mobx": "^6.12.3",
     "@ga/offers-api-in-offer-space": "0.0.1",
-    "@ga/current-service-store-in-offer-space": "0.0.1",
     "@ga/services-api-in-offer-space": "0.0.1",
     "@ga/service-id-in-offer-space": "0.0.1"
   },
