@@ -1,12 +1,12 @@
 import * as OfferList from '@ga/offer-list-store-in-offer-space';
 import * as OfferStruct from '@ga/offer-struct-in-offer-space';
 import { ReadonlyObservable } from '@ga/readonly-observable';
+import * as ServiceId from '@ga/service-id-in-offer-space';
 import * as I from 'fp-ts/Identity';
 import * as O from 'fp-ts/Option';
 import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 import { constVoid, flow, pipe } from 'fp-ts/function';
-import { autorun, computed, onBecomeObserved, onBecomeUnobserved } from 'mobx';
-import * as ServiceId from '@ga/service-id-in-offer-space';
+import { autorun, onBecomeObserved, onBecomeUnobserved } from 'mobx';
 
 export const getOfferListStore =
   (P: {
@@ -18,7 +18,7 @@ export const getOfferListStore =
   (
     id: ServiceId.ServiceId
   ): ReadonlyObservable<
-    O.Option<RNEA.ReadonlyNonEmptyArray<OfferStruct.OfferStructSimplified>>
+    O.Option<RNEA.ReadonlyNonEmptyArray<OfferStruct.OfferStruct>>
   > => {
     const offerListStore = OfferList.get();
 
@@ -40,7 +40,5 @@ export const getOfferListStore =
       flow(unsubscribe, I.chainFirst(OfferList.reset(offerListStore)))
     );
 
-    return computed(() =>
-      pipe(offerListStore.get(), O.map(RNEA.map(OfferStruct.toJSON)))
-    );
+    return offerListStore;
   };
